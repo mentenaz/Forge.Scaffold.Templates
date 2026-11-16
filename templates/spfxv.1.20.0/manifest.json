@@ -1,0 +1,89 @@
+{
+  "id": "spfx-webpart",
+  "version": "1.20.0",
+  "prompts": [
+    {
+      "key": "solutionName",
+      "type": "text",
+      "label": "Solution name",
+      "rule": "solution-name"
+    },
+    {
+      "key": "solutionDescription",
+      "type": "text",
+      "label": "Solution description",
+      "default": "My SPFx solution"
+    },
+    {
+      "key": "webparts",
+      "type": "list",
+      "label": "Web part names",
+      "rule": "webpart-names"
+    },
+    {
+      "key": "install",
+      "type": "bool",
+      "label": "Run install afterwards",
+      "default": false
+    }
+  ],
+  "folderFrom": "solutionName",
+  "nestedMarker": ".yo-rc.json",
+  "guids": [
+    "solutionId",
+    "featureId"
+  ],
+  "include": [
+    {
+      "folder": "solution"
+    }
+  ],
+  "repeat": [
+    {
+      "over": "webparts",
+      "as": "webpart",
+      "folder": "webpart",
+      "guids": [
+        "webpartId"
+      ]
+    }
+  ],
+  "merge": [
+    {
+      "file": "config/config.json",
+      "strategy": "json-set",
+      "path": "bundles.{__webpartKebab__}-web-part",
+      "per": "webparts",
+      "value": {
+        "components": [
+          {
+            "entrypoint": "./lib/webparts/{__webpartCamel__}/{__webpartPascal__}WebPart.js",
+            "manifest": "./src/webparts/{__webpartCamel__}/{__webpartPascal__}WebPart.manifest.json"
+          }
+        ]
+      }
+    },
+    {
+      "file": "config/config.json",
+      "strategy": "json-set",
+      "path": "localizedResources.{__webpartPascal__}WebPartStrings",
+      "per": "webparts",
+      "value": "lib/webparts/{__webpartCamel__}/loc/{locale}.js"
+    }
+  ],
+  "post": [
+    {
+      "action": "install",
+      "when": {
+        "key": "install",
+        "equals": true
+      }
+    }
+  ],
+  "packageManagers": {
+    "default": "npm",
+    "tested": [
+      "npm"
+    ]
+  }
+}
