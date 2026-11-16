@@ -1,0 +1,218 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.mentenaz-server.com/forge-scaffold/manifest.v1.json",
+  "title": "Forge.Scaffold manifest",
+  "description": "Declarative description of a generator: the questions to ask and how its template folders are expanded. Plain data, never code.",
+  "type": "object",
+  "required": ["id", "version", "prompts"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Generator id, e.g. spfx-webpart."
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Version the templates were made from, e.g. 1.23.2."
+    },
+    "prompts": { "type": "array", "items": { "$ref": "#/$defs/prompt" } },
+    "folderFrom": {
+      "type": "string",
+      "description": "Key of the text prompt whose answer names the new folder."
+    },
+    "nestedMarker": {
+      "type": "string",
+      "description": "File whose presence means you are inside an existing solution, e.g. .yo-rc.json."
+    },
+    "guids": {
+      "$ref": "#/$defs/tokenNames",
+      "description": "Solution-level GUID tokens."
+    },
+    "secrets": {
+      "$ref": "#/$defs/tokenNames",
+      "description": "Generated secrets, available as tokens."
+    },
+    "include": { "type": "array", "items": { "$ref": "#/$defs/include" } },
+    "repeat": { "type": "array", "items": { "$ref": "#/$defs/repeat" } },
+    "parts": { "type": "array", "items": { "$ref": "#/$defs/part" } },
+    "merge": { "type": "array", "items": { "$ref": "#/$defs/merge" } },
+    "post": { "type": "array", "items": { "$ref": "#/$defs/postStep" } },
+    "packageManagers": {
+      "type": "object",
+      "required": ["default", "tested"],
+      "additionalProperties": false,
+      "properties": {
+        "default": { "$ref": "#/$defs/packageManager" },
+        "tested": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/packageManager" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "tokenName": { "type": "string", "pattern": "^[A-Za-z0-9]+$" },
+    "tokenNames": { "type": "array", "items": { "$ref": "#/$defs/tokenName" } },
+    "packageManager": { "enum": ["npm", "pnpm", "yarn"] },
+    "when": {
+      "description": "Condition on the answers. Exactly one form: key+equals, key+in, or all.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "key": { "type": "string" },
+        "equals": { "type": ["string", "boolean"] },
+        "in": {
+          "type": "array",
+          "items": { "type": ["string", "boolean"] },
+          "minItems": 1
+        },
+        "all": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/when" },
+          "minItems": 1
+        }
+      },
+      "oneOf": [
+        {
+          "required": ["key", "equals"],
+          "not": { "anyOf": [{ "required": ["in"] }, { "required": ["all"] }] }
+        },
+        {
+          "required": ["key", "in"],
+          "not": {
+            "anyOf": [{ "required": ["equals"] }, { "required": ["all"] }]
+          }
+        },
+        {
+          "required": ["all"],
+          "not": {
+            "anyOf": [
+              { "required": ["key"] },
+              { "required": ["equals"] },
+              { "required": ["in"] }
+            ]
+          }
+        }
+      ]
+    },
+    "prompt": {
+      "type": "object",
+      "required": ["key", "type"],
+      "additionalProperties": false,
+      "properties": {
+        "key": { "$ref": "#/$defs/tokenName" },
+        "type": { "enum": ["text", "bool", "list", "choice"] },
+        "label": { "type": "string" },
+        "default": { "type": ["string", "boolean", "array", "null"] },
+        "options": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "uniqueItems": true
+        },
+        "sensitive": {
+          "type": "boolean",
+          "description": "Text prompts only: masked input, never logged."
+        },
+        "rule": { "enum": ["solution-name", "webpart-names"] }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": { "type": { "const": "choice" } },
+            "required": ["type"]
+          },
+          "then": {
+            "required": ["options"],
+            "properties": { "options": { "minItems": 1 } }
+          }
+        },
+        {
+          "if": {
+            "properties": { "type": { "const": "text" } },
+            "required": ["type"]
+          },
+          "else": { "not": { "required": ["sensitive"] } }
+        }
+      ]
+    },
+    "include": {
+      "type": "object",
+      "required": ["folder"],
+      "additionalProperties": false,
+      "properties": {
+        "folder": { "type": "string", "minLength": 1 },
+        "to": { "type": "string" },
+        "when": { "$ref": "#/$defs/when" }
+      }
+    },
+    "repeat": {
+      "type": "object",
+      "required": ["over", "as", "folder"],
+      "additionalProperties": false,
+      "properties": {
+        "over": {
+          "$ref": "#/$defs/tokenName",
+          "description": "Key of a list prompt."
+        },
+        "as": {
+          "$ref": "#/$defs/tokenName",
+          "description": "Token name for the current item."
+        },
+        "folder": { "type": "string", "minLength": 1 },
+        "guids": {
+          "$ref": "#/$defs/tokenNames",
+          "description": "GUID tokens generated fresh for every item."
+        },
+        "when": { "$ref": "#/$defs/when" }
+      }
+    },
+    "part": {
+      "type": "object",
+      "required": ["target", "source"],
+      "additionalProperties": false,
+      "properties": {
+        "target": { "type": "string", "minLength": 1 },
+        "source": { "type": "string", "minLength": 1 },
+        "when": { "$ref": "#/$defs/when" }
+      }
+    },
+    "merge": {
+      "type": "object",
+      "required": ["file", "strategy", "path"],
+      "additionalProperties": false,
+      "properties": {
+        "file": { "type": "string", "minLength": 1 },
+        "strategy": { "enum": ["json-set", "json-append"] },
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Dotted JSON path; may contain tokens."
+        },
+        "value": {},
+        "valueFile": { "type": "string", "minLength": 1 },
+        "per": {
+          "$ref": "#/$defs/tokenName",
+          "description": "Apply once per item of this list prompt."
+        },
+        "when": { "$ref": "#/$defs/when" }
+      },
+      "oneOf": [
+        { "required": ["value"], "not": { "required": ["valueFile"] } },
+        { "required": ["valueFile"], "not": { "required": ["value"] } }
+      ]
+    },
+    "postStep": {
+      "type": "object",
+      "required": ["action"],
+      "additionalProperties": false,
+      "properties": {
+        "action": { "enum": ["install", "composeUp"] },
+        "cwd": { "type": "string" },
+        "when": { "$ref": "#/$defs/when" }
+      }
+    }
+  }
+}

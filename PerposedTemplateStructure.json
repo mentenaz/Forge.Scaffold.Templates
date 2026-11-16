@@ -1,0 +1,1153 @@
+{
+  "name": "Template Generator",
+  "Templates": [
+    {
+      "type": "SPFx",
+      "versions": [
+        {
+          "version": "1.20.0",
+          "structure": [
+            {
+              "name": ".vscode",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "launch.json",
+                  "type": "file",
+                  "extension": ".json"
+                },
+                {
+                  "name": "settings.json",
+                  "type": "file",
+                  "extension": ".json"
+                }
+              ]
+            },
+            {
+              "name": "config",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "config.json",
+                  "type": "file",
+                  "extension": ".json"
+                },
+                {
+                  "name": "deploy-azure-storage.json",
+                  "type": "file",
+                  "extension": ".json"
+                },
+                {
+                  "name": "package-solution.json",
+                  "type": "file",
+                  "extension": ".json"
+                },
+                {
+                  "name": "sass.json",
+                  "type": "file",
+                  "extension": ".json"
+                },
+                {
+                  "name": "serve.json",
+                  "type": "file",
+                  "extension": ".json"
+                },
+                {
+                  "name": "write-manifests.json",
+                  "type": "file",
+                  "extension": ".json"
+                }
+              ]
+            },
+            {
+              "name": "src",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "webparts",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "template",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "assets",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "welcome-dark.png",
+                              "type": "file",
+                              "extension": ".png"
+                            },
+                            {
+                              "name": "welcome-light.png",
+                              "type": "file",
+                              "extension": ".png"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "components",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "ITemplateProps.ts",
+                              "type": "file",
+                              "extension": ".ts"
+                            },
+                            {
+                              "name": "Template.module.scss",
+                              "type": "file",
+                              "extension": ".scss"
+                            },
+                            {
+                              "name": "Template.tsx",
+                              "type": "file",
+                              "extension": ".tsx"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "loc",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "en-us.js",
+                              "type": "file",
+                              "extension": ".js"
+                            },
+                            {
+                              "name": "mystrings.d.ts",
+                              "type": "file",
+                              "extension": ".ts"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "TemplateWebPart.manifest.json",
+                          "type": "file",
+                          "extension": ".json"
+                        },
+                        {
+                          "name": "TemplateWebPart.ts",
+                          "type": "file",
+                          "extension": ".ts"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "index.ts",
+                  "type": "file",
+                  "extension": ".ts"
+                }
+              ]
+            },
+            {
+              "name": "teams",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "d098cd70-84c4-4b3d-8de5-530d8045ca3f_color.png",
+                  "type": "file",
+                  "extension": ".png"
+                },
+                {
+                  "name": "d098cd70-84c4-4b3d-8de5-530d8045ca3f_outline.png",
+                  "type": "file",
+                  "extension": ".png"
+                }
+              ]
+            },
+            {
+              "name": ".eslintrc.js",
+              "type": "file",
+              "extension": ".js"
+            },
+            {
+              "name": ".gitignore",
+              "type": "file",
+              "extension": ".gitignore"
+            },
+            {
+              "name": ".npmignore",
+              "type": "file",
+              "extension": ".npmignore"
+            },
+            {
+              "name": ".yo-rc.json",
+              "type": "file",
+              "extension": ".json"
+            },
+            {
+              "name": "gulpfile.js",
+              "type": "file",
+              "extension": ".js"
+            },
+            {
+              "name": "package.json",
+              "type": "file",
+              "extension": ".json"
+            },
+            {
+              "name": "README.md",
+              "type": "file",
+              "extension": ".md"
+            },
+            {
+              "name": "tsconfig.json",
+              "type": "file",
+              "extension": ".json"
+            }
+          ]
+        },
+        {
+          "version": "1.21.1",
+          "structure": [
+            {
+              "name": ".vscode",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "launch.json",
+                  "type": "file",
+                  "extension": ".json"
+                },
+                {
+                  "name": "settings.json",
+                  "type": "file",
+                  "extension": ".json"
+                }
+              ]
+            },
+            {
+              "name": "config",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "config.json",
+                  "type": "file",
+                  "extension": ".json"
+                },
+                {
+                  "name": "deploy-azure-storage.json",
+                  "type": "file",
+                  "extension": ".json"
+                },
+                {
+                  "name": "package-solution.json",
+                  "type": "file",
+                  "extension": ".json"
+                },
+                {
+                  "name": "sass.json",
+                  "type": "file",
+                  "extension": ".json"
+                },
+                {
+                  "name": "serve.json",
+                  "type": "file",
+                  "extension": ".json"
+                },
+                {
+                  "name": "write-manifests.json",
+                  "type": "file",
+                  "extension": ".json"
+                }
+              ]
+            },
+            {
+              "name": "src",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "Types",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "ITemplate",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "ITemplateProps.ts",
+                          "type": "file",
+                          "extension": ".ts"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ITemplateWebPart",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "ITemplateWebPart.ts",
+                          "type": "file",
+                          "extension": ".ts"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "index.ts",
+                      "type": "file",
+                      "extension": ".ts"
+                    }
+                  ]
+                },
+                {
+                  "name": "webparts",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "template",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "assets",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "welcome-dark.png",
+                              "type": "file",
+                              "extension": ".png"
+                            },
+                            {
+                              "name": "welcome-light.png",
+                              "type": "file",
+                              "extension": ".png"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "components",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "ITemplateProps.ts",
+                              "type": "file",
+                              "extension": ".ts"
+                            },
+                            {
+                              "name": "Template.module.scss",
+                              "type": "file",
+                              "extension": ".scss"
+                            },
+                            {
+                              "name": "Template.module.scss.ts",
+                              "type": "file",
+                              "extension": ".ts"
+                            },
+                            {
+                              "name": "Template.tsx",
+                              "type": "file",
+                              "extension": ".tsx"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "loc",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "en-us.js",
+                              "type": "file",
+                              "extension": ".js"
+                            },
+                            {
+                              "name": "mystrings.d.ts",
+                              "type": "file",
+                              "extension": ".ts"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "TemplateWebPart.manifest.json",
+                          "type": "file",
+                          "extension": ".json"
+                        },
+                        {
+                          "name": "TemplateWebPart.ts",
+                          "type": "file",
+                          "extension": ".ts"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "custom.d.ts",
+                  "type": "file",
+                  "extension": ".ts"
+                },
+                {
+                  "name": "index.ts",
+                  "type": "file",
+                  "extension": ".ts"
+                }
+              ]
+            },
+            {
+              "name": "teams",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "2a9bea1c-fb45-4652-806c-b33b7833ba2e_color.png",
+                  "type": "file",
+                  "extension": ".png"
+                },
+                {
+                  "name": "2a9bea1c-fb45-4652-806c-b33b7833ba2e_outline.png",
+                  "type": "file",
+                  "extension": ".png"
+                }
+              ]
+            },
+            {
+              "name": ".eslintrc.js",
+              "type": "file",
+              "extension": ".js"
+            },
+            {
+              "name": ".gitignore",
+              "type": "file",
+              "extension": ".gitignore"
+            },
+            {
+              "name": ".npmignore",
+              "type": "file",
+              "extension": ".npmignore"
+            },
+            {
+              "name": ".yo-rc.json",
+              "type": "file",
+              "extension": ".json"
+            },
+            {
+              "name": "gulpfile.js",
+              "type": "file",
+              "extension": ".js"
+            },
+            {
+              "name": "package.json",
+              "type": "file",
+              "extension": ".json"
+            },
+            {
+              "name": "README.md",
+              "type": "file",
+              "extension": ".md"
+            },
+            {
+              "name": "tsconfig.json",
+              "type": "file",
+              "extension": ".json"
+            }
+          ]
+        },
+        {
+          "version": "1.22.2",
+          "structure": [
+            {
+              "name": ".vscode",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "launch.json",
+                  "type": "file",
+                  "extension": ".json"
+                },
+                {
+                  "name": "settings.json",
+                  "type": "file",
+                  "extension": ".json"
+                }
+              ]
+            },
+            {
+              "name": "config",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "config.json",
+                  "type": "file",
+                  "extension": ".json"
+                },
+                {
+                  "name": "deploy-azure-storage.json",
+                  "type": "file",
+                  "extension": ".json"
+                },
+                {
+                  "name": "package-solution.json",
+                  "type": "file",
+                  "extension": ".json"
+                },
+                {
+                  "name": "rig.json",
+                  "type": "file",
+                  "extension": ".json"
+                },
+                {
+                  "name": "sass.json",
+                  "type": "file",
+                  "extension": ".json"
+                },
+                {
+                  "name": "serve.json",
+                  "type": "file",
+                  "extension": ".json"
+                },
+                {
+                  "name": "typescript.json",
+                  "type": "file",
+                  "extension": ".json"
+                },
+                {
+                  "name": "write-manifests.json",
+                  "type": "file",
+                  "extension": ".json"
+                }
+              ]
+            },
+            {
+              "name": "src",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "Types",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "ITemplate",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "ITemplateProps.ts",
+                          "type": "file",
+                          "extension": ".ts"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ITemplateWebPart",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "ITemplateWebPart.ts",
+                          "type": "file",
+                          "extension": ".ts"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "index.ts",
+                      "type": "file",
+                      "extension": ".ts"
+                    }
+                  ]
+                },
+                {
+                  "name": "webparts",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "template",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "assets",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "welcome-dark.png",
+                              "type": "file",
+                              "extension": ".png"
+                            },
+                            {
+                              "name": "welcome-light.png",
+                              "type": "file",
+                              "extension": ".png"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "components",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "Template.module.scss",
+                              "type": "file",
+                              "extension": ".scss"
+                            },
+                            {
+                              "name": "Template.tsx",
+                              "type": "file",
+                              "extension": ".tsx"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "loc",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "en-us.js",
+                              "type": "file",
+                              "extension": ".js"
+                            },
+                            {
+                              "name": "mystrings.d.ts",
+                              "type": "file",
+                              "extension": ".ts"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "TemplateWebPart.manifest.json",
+                          "type": "file",
+                          "extension": ".json"
+                        },
+                        {
+                          "name": "TemplateWebPart.ts",
+                          "type": "file",
+                          "extension": ".ts"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "custom.d.ts",
+                  "type": "file",
+                  "extension": ".ts"
+                }
+              ]
+            },
+            {
+              "name": "teams",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "08bb0d0d-1bde-4b76-aaa7-e38cccee0db2_color.png",
+                  "type": "file",
+                  "extension": ".png"
+                },
+                {
+                  "name": "08bb0d0d-1bde-4b76-aaa7-e38cccee0db2_outline.png",
+                  "type": "file",
+                  "extension": ".png"
+                }
+              ]
+            },
+            {
+              "name": ".eslintrc.js",
+              "type": "file",
+              "extension": ".js"
+            },
+            {
+              "name": ".gitignore",
+              "type": "file",
+              "extension": ".gitignore"
+            },
+            {
+              "name": ".npmignore",
+              "type": "file",
+              "extension": ".npmignore"
+            },
+            {
+              "name": ".yo-rc.json",
+              "type": "file",
+              "extension": ".json"
+            },
+            {
+              "name": "package.json",
+              "type": "file",
+              "extension": ".json"
+            },
+            {
+              "name": "README.md",
+              "type": "file",
+              "extension": ".md"
+            },
+            {
+              "name": "tsconfig.json",
+              "type": "file",
+              "extension": ".json"
+            }
+          ]
+        },
+        {
+          "version": "1.23.0",
+          "structure": [
+            {
+              "name": ".vscode",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "launch.json",
+                  "type": "file",
+                  "extension": ".json"
+                },
+                {
+                  "name": "settings.json",
+                  "type": "file",
+                  "extension": ".json"
+                }
+              ]
+            },
+            {
+              "name": "config",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "config.json",
+                  "type": "file",
+                  "extension": ".json"
+                },
+                {
+                  "name": "deploy-azure-storage.json",
+                  "type": "file",
+                  "extension": ".json"
+                },
+                {
+                  "name": "package-solution.json",
+                  "type": "file",
+                  "extension": ".json"
+                },
+                {
+                  "name": "rig.json",
+                  "type": "file",
+                  "extension": ".json"
+                },
+                {
+                  "name": "sass.json",
+                  "type": "file",
+                  "extension": ".json"
+                },
+                {
+                  "name": "serve.json",
+                  "type": "file",
+                  "extension": ".json"
+                },
+                {
+                  "name": "typescript.json",
+                  "type": "file",
+                  "extension": ".json"
+                },
+                {
+                  "name": "write-manifests.json",
+                  "type": "file",
+                  "extension": ".json"
+                }
+              ]
+            },
+            {
+              "name": "src",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "Types",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "ITemplate",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "ITemplateProps.ts",
+                          "type": "file",
+                          "extension": ".ts"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ITemplateWebPart",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "ITemplateWebPart.ts",
+                          "type": "file",
+                          "extension": ".ts"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "index.ts",
+                      "type": "file",
+                      "extension": ".ts"
+                    }
+                  ]
+                },
+                {
+                  "name": "webparts",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "template",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "assets",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "welcome-dark.png",
+                              "type": "file",
+                              "extension": ".png"
+                            },
+                            {
+                              "name": "welcome-light.png",
+                              "type": "file",
+                              "extension": ".png"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "components",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "Template.module.scss",
+                              "type": "file",
+                              "extension": ".scss"
+                            },
+                            {
+                              "name": "Template.tsx",
+                              "type": "file",
+                              "extension": ".tsx"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "loc",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "en-us.js",
+                              "type": "file",
+                              "extension": ".js"
+                            },
+                            {
+                              "name": "mystrings.d.ts",
+                              "type": "file",
+                              "extension": ".ts"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "TemplateWebPart.manifest.json",
+                          "type": "file",
+                          "extension": ".json"
+                        },
+                        {
+                          "name": "TemplateWebPart.ts",
+                          "type": "file",
+                          "extension": ".ts"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "teams",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "a3b86f9d-3bfc-460f-a538-1496689811e8_color.png",
+                  "type": "file",
+                  "extension": ".png"
+                },
+                {
+                  "name": "a3b86f9d-3bfc-460f-a538-1496689811e8_outline.png",
+                  "type": "file",
+                  "extension": ".png"
+                }
+              ]
+            },
+            {
+              "name": ".gitignore",
+              "type": "file",
+              "extension": ".gitignore"
+            },
+            {
+              "name": ".npmignore",
+              "type": "file",
+              "extension": ".npmignore"
+            },
+            {
+              "name": ".yo-rc.json",
+              "type": "file",
+              "extension": ".json"
+            },
+            {
+              "name": "eslint.config.js",
+              "type": "file",
+              "extension": ".js"
+            },
+            {
+              "name": "package.json",
+              "type": "file",
+              "extension": ".json"
+            },
+            {
+              "name": "README.md",
+              "type": "file",
+              "extension": ".md"
+            },
+            {
+              "name": "tsconfig.json",
+              "type": "file",
+              "extension": ".json"
+            }
+          ]
+        },
+        {
+          "version": "1.23.2",
+          "structure": [
+            {
+              "name": ".vscode",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "launch.json",
+                  "type": "file",
+                  "extension": ".json"
+                },
+                {
+                  "name": "settings.json",
+                  "type": "file",
+                  "extension": ".json"
+                }
+              ]
+            },
+            {
+              "name": "config",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "config.json",
+                  "type": "file",
+                  "extension": ".json"
+                },
+                {
+                  "name": "deploy-azure-storage.json",
+                  "type": "file",
+                  "extension": ".json"
+                },
+                {
+                  "name": "package-solution.json",
+                  "type": "file",
+                  "extension": ".json"
+                },
+                {
+                  "name": "rig.json",
+                  "type": "file",
+                  "extension": ".json"
+                },
+                {
+                  "name": "sass.json",
+                  "type": "file",
+                  "extension": ".json"
+                },
+                {
+                  "name": "serve.json",
+                  "type": "file",
+                  "extension": ".json"
+                },
+                {
+                  "name": "typescript.json",
+                  "type": "file",
+                  "extension": ".json"
+                },
+                {
+                  "name": "write-manifests.json",
+                  "type": "file",
+                  "extension": ".json"
+                }
+              ]
+            },
+            {
+              "name": "src",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "Types",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "ITemplate",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "ITemplateProps.ts",
+                          "type": "file",
+                          "extension": ".ts"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "ITemplateWebPart",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "ITemplateWebPart.ts",
+                          "type": "file",
+                          "extension": ".ts"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "index.ts",
+                      "type": "file",
+                      "extension": ".ts"
+                    }
+                  ]
+                },
+                {
+                  "name": "webparts",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "template",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "assets",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "welcome-dark.png",
+                              "type": "file",
+                              "extension": ".png"
+                            },
+                            {
+                              "name": "welcome-light.png",
+                              "type": "file",
+                              "extension": ".png"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "components",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "Template.module.scss",
+                              "type": "file",
+                              "extension": ".scss"
+                            },
+                            {
+                              "name": "Template.tsx",
+                              "type": "file",
+                              "extension": ".tsx"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "loc",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "en-us.js",
+                              "type": "file",
+                              "extension": ".js"
+                            },
+                            {
+                              "name": "mystrings.d.ts",
+                              "type": "file",
+                              "extension": ".ts"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "TemplateWebPart.manifest.json",
+                          "type": "file",
+                          "extension": ".json"
+                        },
+                        {
+                          "name": "TemplateWebPart.ts",
+                          "type": "file",
+                          "extension": ".ts"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "teams",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "74f2a33c-1422-48b0-8443-11d4c6f3b1ca_color.png",
+                  "type": "file",
+                  "extension": ".png"
+                },
+                {
+                  "name": "74f2a33c-1422-48b0-8443-11d4c6f3b1ca_outline.png",
+                  "type": "file",
+                  "extension": ".png"
+                }
+              ]
+            },
+            {
+              "name": ".gitignore",
+              "type": "file",
+              "extension": ".gitignore"
+            },
+            {
+              "name": ".npmignore",
+              "type": "file",
+              "extension": ".npmignore"
+            },
+            {
+              "name": ".yo-rc.json",
+              "type": "file",
+              "extension": ".json"
+            },
+            {
+              "name": "eslint.config.js",
+              "type": "file",
+              "extension": ".js"
+            },
+            {
+              "name": "package.json",
+              "type": "file",
+              "extension": ".json"
+            },
+            {
+              "name": "README.md",
+              "type": "file",
+              "extension": ".md"
+            },
+            {
+              "name": "tsconfig.json",
+              "type": "file",
+              "extension": ".json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "backend-api",
+      "versions": []
+    },
+    {
+      "type": "fullstack",
+      "versions": []
+    },
+    {
+      "type": "vite-react",
+      "versions": []
+    },
+    {
+      "type": "tools",
+      "versions": []
+    }
+  ]
+}

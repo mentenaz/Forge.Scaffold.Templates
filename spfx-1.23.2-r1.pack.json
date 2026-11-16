@@ -1,0 +1,47 @@
+{
+  "$schema": "https://schemas.mentenaz-server.com/forge-scaffold/pack.v1.json",
+  "schema": 1,
+  "generator": "spfx",
+  "version": "1.23.2",
+  "revision": 1,
+  "manifest": {
+    "id": "spfx",
+    "version": "1.23.2",
+    "prompts": [
+      { "key": "solutionName", "type": "text", "label": "Solution name" },
+      { "key": "webparts", "type": "list", "label": "Web parts" },
+      { "key": "install", "type": "bool", "default": false }
+    ],
+    "guids": ["solutionId"],
+    "include": [{ "folder": "base" }],
+    "repeat": [
+      {
+        "over": "webparts",
+        "as": "webpartNaam",
+        "folder": "webpart",
+        "guids": ["webpartId"]
+      }
+    ]
+  },
+  "entries": [
+    { "type": "dir", "path": "base/config" },
+    {
+      "type": "file",
+      "path": "base/package.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"{__solutionNameKebab__}\",\n  …\n}\n"
+    },
+    {
+      "type": "file",
+      "path": "base/assets/icon.png",
+      "encoding": "base64",
+      "content": "iVBORw0KGgo…"
+    },
+    {
+      "type": "file",
+      "path": "webpart/src/webparts/{__webpartNaamCamel__}/{__webpartNaam__}.tsx",
+      "encoding": "utf8",
+      "content": "import * as React from 'react';\n…"
+    }
+  ]
+}

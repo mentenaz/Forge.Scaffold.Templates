@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.mentenaz-server.com/forge-scaffold/pack.v1.json",
+  "title": "Forge.Scaffold pack",
+  "description": "One generator version: its manifest plus every template file, in a single file.",
+  "type": "object",
+  "required": [
+    "schema",
+    "generator",
+    "version",
+    "revision",
+    "manifest",
+    "entries"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "schema": { "const": 1 },
+    "generator": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "revision": { "type": "integer", "minimum": 1 },
+    "manifest": { "$ref": "manifest.v1.json" },
+    "entries": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "required": ["type", "path"],
+            "additionalProperties": false,
+            "properties": {
+              "type": { "const": "dir" },
+              "path": { "type": "string", "minLength": 1 }
+            }
+          },
+          {
+            "type": "object",
+            "required": ["type", "path", "encoding", "content"],
+            "additionalProperties": false,
+            "properties": {
+              "type": { "const": "file" },
+              "path": { "type": "string", "minLength": 1 },
+              "encoding": { "enum": ["utf8", "base64"] },
+              "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+              "content": { "type": "string" }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

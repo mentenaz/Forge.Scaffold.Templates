@@ -1,0 +1,3648 @@
+{
+  "name": "Forge.Scaffold.Templates",
+  "path": "E:\\Forge.Scaffold.Templates",
+  "type": "directory",
+  "children": [
+    {
+      "name": ".github",
+      "path": "E:\\Forge.Scaffold.Templates\\.github",
+      "type": "directory",
+      "children": [
+        {
+          "name": "workflows",
+          "path": "E:\\Forge.Scaffold.Templates\\.github\\workflows",
+          "type": "directory",
+          "children": [],
+          "truncated": false
+        }
+      ],
+      "truncated": false
+    },
+    {
+      "name": "generators",
+      "path": "E:\\Forge.Scaffold.Templates\\generators",
+      "type": "directory",
+      "children": [
+        {
+          "name": "backend-api",
+          "path": "E:\\Forge.Scaffold.Templates\\generators\\backend-api",
+          "type": "directory",
+          "children": [],
+          "truncated": false
+        },
+        {
+          "name": "fullstack",
+          "path": "E:\\Forge.Scaffold.Templates\\generators\\fullstack",
+          "type": "directory",
+          "children": [],
+          "truncated": false
+        },
+        {
+          "name": "spfx-webpart",
+          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart",
+          "type": "directory",
+          "children": [
+            {
+              "name": "1.20.0",
+              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0",
+              "type": "directory",
+              "children": [
+                {
+                  "name": ".vscode",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0\\.vscode",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "launch.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0\\.vscode\\launch.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 641
+                    },
+                    {
+                      "name": "settings.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0\\.vscode\\settings.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 430
+                    }
+                  ],
+                  "truncated": false
+                },
+                {
+                  "name": "config",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0\\config",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "config.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0\\config\\config.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 489
+                    },
+                    {
+                      "name": "deploy-azure-storage.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0\\config\\deploy-azure-storage.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 255
+                    },
+                    {
+                      "name": "package-solution.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0\\config\\package-solution.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 1071
+                    },
+                    {
+                      "name": "sass.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0\\config\\sass.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 91
+                    },
+                    {
+                      "name": "serve.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0\\config\\serve.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 198
+                    },
+                    {
+                      "name": "write-manifests.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0\\config\\write-manifests.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 143
+                    }
+                  ],
+                  "truncated": false
+                },
+                {
+                  "name": "src",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0\\src",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "webparts",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0\\src\\webparts",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "template",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0\\src\\webparts\\template",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "assets",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0\\src\\webparts\\template\\assets",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "welcome-dark.png",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0\\src\\webparts\\template\\assets\\welcome-dark.png",
+                                  "type": "file",
+                                  "extension": ".png",
+                                  "size": 12545
+                                },
+                                {
+                                  "name": "welcome-light.png",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0\\src\\webparts\\template\\assets\\welcome-light.png",
+                                  "type": "file",
+                                  "extension": ".png",
+                                  "size": 12816
+                                }
+                              ],
+                              "truncated": false
+                            },
+                            {
+                              "name": "components",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0\\src\\webparts\\template\\components",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "ITemplateProps.ts",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0\\src\\webparts\\template\\components\\ITemplateProps.ts",
+                                  "type": "file",
+                                  "extension": ".ts",
+                                  "size": 168
+                                },
+                                {
+                                  "name": "Template.module.scss",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0\\src\\webparts\\template\\components\\Template.module.scss",
+                                  "type": "file",
+                                  "extension": ".scss",
+                                  "size": 734
+                                },
+                                {
+                                  "name": "Template.tsx",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0\\src\\webparts\\template\\components\\Template.tsx",
+                                  "type": "file",
+                                  "extension": ".tsx",
+                                  "size": 3367
+                                }
+                              ],
+                              "truncated": false
+                            },
+                            {
+                              "name": "loc",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0\\src\\webparts\\template\\loc",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "en-us.js",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0\\src\\webparts\\template\\loc\\en-us.js",
+                                  "type": "file",
+                                  "extension": ".js",
+                                  "size": 916
+                                },
+                                {
+                                  "name": "mystrings.d.ts",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0\\src\\webparts\\template\\loc\\mystrings.d.ts",
+                                  "type": "file",
+                                  "extension": ".ts",
+                                  "size": 564
+                                }
+                              ],
+                              "truncated": false
+                            },
+                            {
+                              "name": "TemplateWebPart.manifest.json",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0\\src\\webparts\\template\\TemplateWebPart.manifest.json",
+                              "type": "file",
+                              "extension": ".json",
+                              "size": 1146
+                            },
+                            {
+                              "name": "TemplateWebPart.ts",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0\\src\\webparts\\template\\TemplateWebPart.ts",
+                              "type": "file",
+                              "extension": ".ts",
+                              "size": 3889
+                            }
+                          ],
+                          "truncated": false
+                        }
+                      ],
+                      "truncated": false
+                    },
+                    {
+                      "name": "index.ts",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0\\src\\index.ts",
+                      "type": "file",
+                      "extension": ".ts",
+                      "size": 89
+                    }
+                  ],
+                  "truncated": false
+                },
+                {
+                  "name": "teams",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0\\teams",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "d098cd70-84c4-4b3d-8de5-530d8045ca3f_color.png",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0\\teams\\d098cd70-84c4-4b3d-8de5-530d8045ca3f_color.png",
+                      "type": "file",
+                      "extension": ".png",
+                      "size": 10248
+                    },
+                    {
+                      "name": "d098cd70-84c4-4b3d-8de5-530d8045ca3f_outline.png",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0\\teams\\d098cd70-84c4-4b3d-8de5-530d8045ca3f_outline.png",
+                      "type": "file",
+                      "extension": ".png",
+                      "size": 249
+                    }
+                  ],
+                  "truncated": false
+                },
+                {
+                  "name": ".eslintrc.js",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0\\.eslintrc.js",
+                  "type": "file",
+                  "extension": ".js",
+                  "size": 18079
+                },
+                {
+                  "name": ".gitignore",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0\\.gitignore",
+                  "type": "file",
+                  "extension": ".gitignore",
+                  "size": 340
+                },
+                {
+                  "name": ".npmignore",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0\\.npmignore",
+                  "type": "file",
+                  "extension": ".npmignore",
+                  "size": 99
+                },
+                {
+                  "name": ".yo-rc.json",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0\\.yo-rc.json",
+                  "type": "file",
+                  "extension": ".json",
+                  "size": 604
+                },
+                {
+                  "name": "gulpfile.js",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0\\gulpfile.js",
+                  "type": "file",
+                  "extension": ".js",
+                  "size": 532
+                },
+                {
+                  "name": "package-lock.json",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0\\package-lock.json",
+                  "type": "file",
+                  "extension": ".json",
+                  "size": 1310337
+                },
+                {
+                  "name": "package.json",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0\\package.json",
+                  "type": "file",
+                  "extension": ".json",
+                  "size": 1262
+                },
+                {
+                  "name": "README.md",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0\\README.md",
+                  "type": "file",
+                  "extension": ".md",
+                  "size": 2712
+                },
+                {
+                  "name": "tsconfig.json",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.20.0\\tsconfig.json",
+                  "type": "file",
+                  "extension": ".json",
+                  "size": 740
+                }
+              ],
+              "truncated": false
+            },
+            {
+              "name": "1.21.1",
+              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1",
+              "type": "directory",
+              "children": [
+                {
+                  "name": ".vscode",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\.vscode",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "launch.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\.vscode\\launch.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 641
+                    },
+                    {
+                      "name": "settings.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\.vscode\\settings.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 430
+                    }
+                  ],
+                  "truncated": false
+                },
+                {
+                  "name": "config",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\config",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "config.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\config\\config.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 489
+                    },
+                    {
+                      "name": "deploy-azure-storage.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\config\\deploy-azure-storage.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 255
+                    },
+                    {
+                      "name": "package-solution.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\config\\package-solution.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 1071
+                    },
+                    {
+                      "name": "sass.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\config\\sass.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 91
+                    },
+                    {
+                      "name": "serve.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\config\\serve.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 198
+                    },
+                    {
+                      "name": "write-manifests.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\config\\write-manifests.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 143
+                    }
+                  ],
+                  "truncated": false
+                },
+                {
+                  "name": "lib",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "Types",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\Types",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "ITemplate",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\Types\\ITemplate",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "ITemplateProps.d.ts",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\Types\\ITemplate\\ITemplateProps.d.ts",
+                              "type": "file",
+                              "extension": ".ts",
+                              "size": 192
+                            },
+                            {
+                              "name": "ITemplateProps.d.ts.map",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\Types\\ITemplate\\ITemplateProps.d.ts.map",
+                              "type": "file",
+                              "extension": ".map",
+                              "size": 275
+                            },
+                            {
+                              "name": "ITemplateProps.js",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\Types\\ITemplate\\ITemplateProps.js",
+                              "type": "file",
+                              "extension": ".js",
+                              "size": 53
+                            },
+                            {
+                              "name": "ITemplateProps.js.map",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\Types\\ITemplate\\ITemplateProps.js.map",
+                              "type": "file",
+                              "extension": ".map",
+                              "size": 142
+                            }
+                          ],
+                          "truncated": false
+                        },
+                        {
+                          "name": "ITemplateWebPart",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\Types\\ITemplateWebPart",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "ITemplateWebPart.d.ts",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\Types\\ITemplateWebPart\\ITemplateWebPart.d.ts",
+                              "type": "file",
+                              "extension": ".ts",
+                              "size": 114
+                            },
+                            {
+                              "name": "ITemplateWebPart.d.ts.map",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\Types\\ITemplateWebPart\\ITemplateWebPart.d.ts.map",
+                              "type": "file",
+                              "extension": ".map",
+                              "size": 208
+                            },
+                            {
+                              "name": "ITemplateWebPart.js",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\Types\\ITemplateWebPart\\ITemplateWebPart.js",
+                              "type": "file",
+                              "extension": ".js",
+                              "size": 55
+                            },
+                            {
+                              "name": "ITemplateWebPart.js.map",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\Types\\ITemplateWebPart\\ITemplateWebPart.js.map",
+                              "type": "file",
+                              "extension": ".map",
+                              "size": 153
+                            }
+                          ],
+                          "truncated": false
+                        },
+                        {
+                          "name": "index.d.ts",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\Types\\index.d.ts",
+                          "type": "file",
+                          "extension": ".ts",
+                          "size": 132
+                        },
+                        {
+                          "name": "index.d.ts.map",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\Types\\index.d.ts.map",
+                          "type": "file",
+                          "extension": ".map",
+                          "size": 157
+                        },
+                        {
+                          "name": "index.js",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\Types\\index.js",
+                          "type": "file",
+                          "extension": ".js",
+                          "size": 130
+                        },
+                        {
+                          "name": "index.js.map",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\Types\\index.js.map",
+                          "type": "file",
+                          "extension": ".map",
+                          "size": 155
+                        }
+                      ],
+                      "truncated": false
+                    },
+                    {
+                      "name": "webparts",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\webparts",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "template",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\webparts\\template",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "assets",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\webparts\\template\\assets",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "welcome-dark.png",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\webparts\\template\\assets\\welcome-dark.png",
+                                  "type": "file",
+                                  "extension": ".png",
+                                  "size": 12545
+                                },
+                                {
+                                  "name": "welcome-light.png",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\webparts\\template\\assets\\welcome-light.png",
+                                  "type": "file",
+                                  "extension": ".png",
+                                  "size": 12816
+                                }
+                              ],
+                              "truncated": false
+                            },
+                            {
+                              "name": "components",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\webparts\\template\\components",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "ITemplateProps.d.ts",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\webparts\\template\\components\\ITemplateProps.d.ts",
+                                  "type": "file",
+                                  "extension": ".ts",
+                                  "size": 222
+                                },
+                                {
+                                  "name": "ITemplateProps.d.ts.map",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\webparts\\template\\components\\ITemplateProps.d.ts.map",
+                                  "type": "file",
+                                  "extension": ".map",
+                                  "size": 317
+                                },
+                                {
+                                  "name": "ITemplateProps.js",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\webparts\\template\\components\\ITemplateProps.js",
+                                  "type": "file",
+                                  "extension": ".js",
+                                  "size": 53
+                                },
+                                {
+                                  "name": "ITemplateProps.js.map",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\webparts\\template\\components\\ITemplateProps.js.map",
+                                  "type": "file",
+                                  "extension": ".map",
+                                  "size": 158
+                                },
+                                {
+                                  "name": "Template.d.ts",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\webparts\\template\\components\\Template.d.ts",
+                                  "type": "file",
+                                  "extension": ".ts",
+                                  "size": 181
+                                },
+                                {
+                                  "name": "Template.d.ts.map",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\webparts\\template\\components\\Template.d.ts.map",
+                                  "type": "file",
+                                  "extension": ".map",
+                                  "size": 237
+                                },
+                                {
+                                  "name": "Template.js",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\webparts\\template\\components\\Template.js",
+                                  "type": "file",
+                                  "extension": ".js",
+                                  "size": 3162
+                                },
+                                {
+                                  "name": "Template.js.map",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\webparts\\template\\components\\Template.js.map",
+                                  "type": "file",
+                                  "extension": ".map",
+                                  "size": 1513
+                                },
+                                {
+                                  "name": "Template.module.css",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\webparts\\template\\components\\Template.module.css",
+                                  "type": "file",
+                                  "extension": ".css",
+                                  "size": 1162
+                                },
+                                {
+                                  "name": "Template.module.scss.d.ts",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\webparts\\template\\components\\Template.module.scss.d.ts",
+                                  "type": "file",
+                                  "extension": ".ts",
+                                  "size": 207
+                                },
+                                {
+                                  "name": "Template.module.scss.d.ts.map",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\webparts\\template\\components\\Template.module.scss.d.ts.map",
+                                  "type": "file",
+                                  "extension": ".map",
+                                  "size": 226
+                                },
+                                {
+                                  "name": "Template.module.scss.js",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\webparts\\template\\components\\Template.module.scss.js",
+                                  "type": "file",
+                                  "extension": ".js",
+                                  "size": 293
+                                },
+                                {
+                                  "name": "Template.module.scss.js.map",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\webparts\\template\\components\\Template.module.scss.js.map",
+                                  "type": "file",
+                                  "extension": ".map",
+                                  "size": 367
+                                }
+                              ],
+                              "truncated": false
+                            },
+                            {
+                              "name": "loc",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\webparts\\template\\loc",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "en-us.js",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\webparts\\template\\loc\\en-us.js",
+                                  "type": "file",
+                                  "extension": ".js",
+                                  "size": 916
+                                }
+                              ],
+                              "truncated": false
+                            },
+                            {
+                              "name": "TemplateWebPart.d.ts",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\webparts\\template\\TemplateWebPart.d.ts",
+                              "type": "file",
+                              "extension": ".ts",
+                              "size": 831
+                            },
+                            {
+                              "name": "TemplateWebPart.d.ts.map",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\webparts\\template\\TemplateWebPart.d.ts.map",
+                              "type": "file",
+                              "extension": ".map",
+                              "size": 750
+                            },
+                            {
+                              "name": "TemplateWebPart.js",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\webparts\\template\\TemplateWebPart.js",
+                              "type": "file",
+                              "extension": ".js",
+                              "size": 4124
+                            },
+                            {
+                              "name": "TemplateWebPart.js.map",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\webparts\\template\\TemplateWebPart.js.map",
+                              "type": "file",
+                              "extension": ".map",
+                              "size": 3004
+                            },
+                            {
+                              "name": "TemplateWebPart.manifest.json",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\webparts\\template\\TemplateWebPart.manifest.json",
+                              "type": "file",
+                              "extension": ".json",
+                              "size": 1146
+                            }
+                          ],
+                          "truncated": false
+                        }
+                      ],
+                      "truncated": false
+                    },
+                    {
+                      "name": "index.d.ts",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\index.d.ts",
+                      "type": "file",
+                      "extension": ".ts",
+                      "size": 35
+                    },
+                    {
+                      "name": "index.d.ts.map",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\index.d.ts.map",
+                      "type": "file",
+                      "extension": ".map",
+                      "size": 104
+                    },
+                    {
+                      "name": "index.js",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\index.js",
+                      "type": "file",
+                      "extension": ".js",
+                      "size": 122
+                    },
+                    {
+                      "name": "index.js.map",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\lib\\index.js.map",
+                      "type": "file",
+                      "extension": ".map",
+                      "size": 113
+                    }
+                  ],
+                  "truncated": false
+                },
+                {
+                  "name": "src",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\src",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "Types",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\src\\Types",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "ITemplate",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\src\\Types\\ITemplate",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "ITemplateProps.ts",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\src\\Types\\ITemplate\\ITemplateProps.ts",
+                              "type": "file",
+                              "extension": ".ts",
+                              "size": 140
+                            }
+                          ],
+                          "truncated": false
+                        },
+                        {
+                          "name": "ITemplateWebPart",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\src\\Types\\ITemplateWebPart",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "ITemplateWebPart.ts",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\src\\Types\\ITemplateWebPart\\ITemplateWebPart.ts",
+                              "type": "file",
+                              "extension": ".ts",
+                              "size": 66
+                            }
+                          ],
+                          "truncated": false
+                        },
+                        {
+                          "name": "index.ts",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\src\\Types\\index.ts",
+                          "type": "file",
+                          "extension": ".ts",
+                          "size": 97
+                        }
+                      ],
+                      "truncated": false
+                    },
+                    {
+                      "name": "webparts",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\src\\webparts",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "template",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\src\\webparts\\template",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "assets",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\src\\webparts\\template\\assets",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "welcome-dark.png",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\src\\webparts\\template\\assets\\welcome-dark.png",
+                                  "type": "file",
+                                  "extension": ".png",
+                                  "size": 12545
+                                },
+                                {
+                                  "name": "welcome-light.png",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\src\\webparts\\template\\assets\\welcome-light.png",
+                                  "type": "file",
+                                  "extension": ".png",
+                                  "size": 12816
+                                }
+                              ],
+                              "truncated": false
+                            },
+                            {
+                              "name": "components",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\src\\webparts\\template\\components",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "ITemplateProps.ts",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\src\\webparts\\template\\components\\ITemplateProps.ts",
+                                  "type": "file",
+                                  "extension": ".ts",
+                                  "size": 168
+                                },
+                                {
+                                  "name": "Template.module.scss",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\src\\webparts\\template\\components\\Template.module.scss",
+                                  "type": "file",
+                                  "extension": ".scss",
+                                  "size": 734
+                                },
+                                {
+                                  "name": "Template.module.scss.ts",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\src\\webparts\\template\\components\\Template.module.scss.ts",
+                                  "type": "file",
+                                  "extension": ".ts",
+                                  "size": 248
+                                },
+                                {
+                                  "name": "Template.tsx",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\src\\webparts\\template\\components\\Template.tsx",
+                                  "type": "file",
+                                  "extension": ".tsx",
+                                  "size": 3009
+                                }
+                              ],
+                              "truncated": false
+                            },
+                            {
+                              "name": "loc",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\src\\webparts\\template\\loc",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "en-us.js",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\src\\webparts\\template\\loc\\en-us.js",
+                                  "type": "file",
+                                  "extension": ".js",
+                                  "size": 916
+                                },
+                                {
+                                  "name": "mystrings.d.ts",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\src\\webparts\\template\\loc\\mystrings.d.ts",
+                                  "type": "file",
+                                  "extension": ".ts",
+                                  "size": 564
+                                }
+                              ],
+                              "truncated": false
+                            },
+                            {
+                              "name": "TemplateWebPart.manifest.json",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\src\\webparts\\template\\TemplateWebPart.manifest.json",
+                              "type": "file",
+                              "extension": ".json",
+                              "size": 1146
+                            },
+                            {
+                              "name": "TemplateWebPart.ts",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\src\\webparts\\template\\TemplateWebPart.ts",
+                              "type": "file",
+                              "extension": ".ts",
+                              "size": 3957
+                            }
+                          ],
+                          "truncated": false
+                        }
+                      ],
+                      "truncated": false
+                    },
+                    {
+                      "name": "custom.d.ts",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\src\\custom.d.ts",
+                      "type": "file",
+                      "extension": ".ts",
+                      "size": 70
+                    },
+                    {
+                      "name": "index.ts",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\src\\index.ts",
+                      "type": "file",
+                      "extension": ".ts",
+                      "size": 89
+                    }
+                  ],
+                  "truncated": false
+                },
+                {
+                  "name": "teams",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\teams",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "2a9bea1c-fb45-4652-806c-b33b7833ba2e_color.png",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\teams\\2a9bea1c-fb45-4652-806c-b33b7833ba2e_color.png",
+                      "type": "file",
+                      "extension": ".png",
+                      "size": 10248
+                    },
+                    {
+                      "name": "2a9bea1c-fb45-4652-806c-b33b7833ba2e_outline.png",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\teams\\2a9bea1c-fb45-4652-806c-b33b7833ba2e_outline.png",
+                      "type": "file",
+                      "extension": ".png",
+                      "size": 249
+                    }
+                  ],
+                  "truncated": false
+                },
+                {
+                  "name": ".eslintrc.js",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\.eslintrc.js",
+                  "type": "file",
+                  "extension": ".js",
+                  "size": 18079
+                },
+                {
+                  "name": ".gitignore",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\.gitignore",
+                  "type": "file",
+                  "extension": ".gitignore",
+                  "size": 340
+                },
+                {
+                  "name": ".npmignore",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\.npmignore",
+                  "type": "file",
+                  "extension": ".npmignore",
+                  "size": 99
+                },
+                {
+                  "name": ".yo-rc.json",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\.yo-rc.json",
+                  "type": "file",
+                  "extension": ".json",
+                  "size": 509
+                },
+                {
+                  "name": "gulpfile.js",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\gulpfile.js",
+                  "type": "file",
+                  "extension": ".js",
+                  "size": 854
+                },
+                {
+                  "name": "package-lock.json",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\package-lock.json",
+                  "type": "file",
+                  "extension": ".json",
+                  "size": 1419155
+                },
+                {
+                  "name": "package.json",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\package.json",
+                  "type": "file",
+                  "extension": ".json",
+                  "size": 1381
+                },
+                {
+                  "name": "README.md",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\README.md",
+                  "type": "file",
+                  "extension": ".md",
+                  "size": 2712
+                },
+                {
+                  "name": "tsconfig.json",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.21.1\\tsconfig.json",
+                  "type": "file",
+                  "extension": ".json",
+                  "size": 796
+                }
+              ],
+              "truncated": false
+            },
+            {
+              "name": "1.22.2",
+              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2",
+              "type": "directory",
+              "children": [
+                {
+                  "name": ".vscode",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\.vscode",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "launch.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\.vscode\\launch.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 641
+                    },
+                    {
+                      "name": "settings.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\.vscode\\settings.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 430
+                    }
+                  ],
+                  "truncated": false
+                },
+                {
+                  "name": "config",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\config",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "config.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\config\\config.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 489
+                    },
+                    {
+                      "name": "deploy-azure-storage.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\config\\deploy-azure-storage.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 256
+                    },
+                    {
+                      "name": "package-solution.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\config\\package-solution.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 1071
+                    },
+                    {
+                      "name": "rig.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\config\\rig.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 329
+                    },
+                    {
+                      "name": "sass.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\config\\sass.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 181
+                    },
+                    {
+                      "name": "serve.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\config\\serve.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 198
+                    },
+                    {
+                      "name": "typescript.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\config\\typescript.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 256
+                    },
+                    {
+                      "name": "write-manifests.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\config\\write-manifests.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 143
+                    }
+                  ],
+                  "truncated": false
+                },
+                {
+                  "name": "lib",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "Types",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib\\Types",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "ITemplate",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib\\Types\\ITemplate",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "ITemplateProps.d.ts",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib\\Types\\ITemplate\\ITemplateProps.d.ts",
+                              "type": "file",
+                              "extension": ".ts",
+                              "size": 192
+                            },
+                            {
+                              "name": "ITemplateProps.d.ts.map",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib\\Types\\ITemplate\\ITemplateProps.d.ts.map",
+                              "type": "file",
+                              "extension": ".map",
+                              "size": 275
+                            },
+                            {
+                              "name": "ITemplateProps.js",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib\\Types\\ITemplate\\ITemplateProps.js",
+                              "type": "file",
+                              "extension": ".js",
+                              "size": 53
+                            },
+                            {
+                              "name": "ITemplateProps.js.map",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib\\Types\\ITemplate\\ITemplateProps.js.map",
+                              "type": "file",
+                              "extension": ".map",
+                              "size": 310
+                            }
+                          ],
+                          "truncated": false
+                        },
+                        {
+                          "name": "ITemplateWebPart",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib\\Types\\ITemplateWebPart",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "ITemplateWebPart.d.ts",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib\\Types\\ITemplateWebPart\\ITemplateWebPart.d.ts",
+                              "type": "file",
+                              "extension": ".ts",
+                              "size": 114
+                            },
+                            {
+                              "name": "ITemplateWebPart.d.ts.map",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib\\Types\\ITemplateWebPart\\ITemplateWebPart.d.ts.map",
+                              "type": "file",
+                              "extension": ".map",
+                              "size": 208
+                            },
+                            {
+                              "name": "ITemplateWebPart.js",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib\\Types\\ITemplateWebPart\\ITemplateWebPart.js",
+                              "type": "file",
+                              "extension": ".js",
+                              "size": 55
+                            },
+                            {
+                              "name": "ITemplateWebPart.js.map",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib\\Types\\ITemplateWebPart\\ITemplateWebPart.js.map",
+                              "type": "file",
+                              "extension": ".map",
+                              "size": 244
+                            }
+                          ],
+                          "truncated": false
+                        },
+                        {
+                          "name": "index.d.ts",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib\\Types\\index.d.ts",
+                          "type": "file",
+                          "extension": ".ts",
+                          "size": 132
+                        },
+                        {
+                          "name": "index.d.ts.map",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib\\Types\\index.d.ts.map",
+                          "type": "file",
+                          "extension": ".map",
+                          "size": 157
+                        },
+                        {
+                          "name": "index.js",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib\\Types\\index.js",
+                          "type": "file",
+                          "extension": ".js",
+                          "size": 130
+                        },
+                        {
+                          "name": "index.js.map",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib\\Types\\index.js.map",
+                          "type": "file",
+                          "extension": ".map",
+                          "size": 280
+                        }
+                      ],
+                      "truncated": false
+                    },
+                    {
+                      "name": "webparts",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib\\webparts",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "template",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib\\webparts\\template",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "assets",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib\\webparts\\template\\assets",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "welcome-dark.png",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib\\webparts\\template\\assets\\welcome-dark.png",
+                                  "type": "file",
+                                  "extension": ".png",
+                                  "size": 12545
+                                },
+                                {
+                                  "name": "welcome-light.png",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib\\webparts\\template\\assets\\welcome-light.png",
+                                  "type": "file",
+                                  "extension": ".png",
+                                  "size": 12816
+                                }
+                              ],
+                              "truncated": false
+                            },
+                            {
+                              "name": "components",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib\\webparts\\template\\components",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "Template.d.ts",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib\\webparts\\template\\components\\Template.d.ts",
+                                  "type": "file",
+                                  "extension": ".ts",
+                                  "size": 149
+                                },
+                                {
+                                  "name": "Template.d.ts.map",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib\\webparts\\template\\components\\Template.d.ts.map",
+                                  "type": "file",
+                                  "extension": ".map",
+                                  "size": 251
+                                },
+                                {
+                                  "name": "Template.js",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib\\webparts\\template\\components\\Template.js",
+                                  "type": "file",
+                                  "extension": ".js",
+                                  "size": 3249
+                                },
+                                {
+                                  "name": "Template.js.map",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib\\webparts\\template\\components\\Template.js.map",
+                                  "type": "file",
+                                  "extension": ".map",
+                                  "size": 4734
+                                },
+                                {
+                                  "name": "Template.module.scss.css",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib\\webparts\\template\\components\\Template.module.scss.css",
+                                  "type": "file",
+                                  "extension": ".css",
+                                  "size": 704
+                                }
+                              ],
+                              "truncated": false
+                            },
+                            {
+                              "name": "loc",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib\\webparts\\template\\loc",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "en-us.js",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib\\webparts\\template\\loc\\en-us.js",
+                                  "type": "file",
+                                  "extension": ".js",
+                                  "size": 916
+                                }
+                              ],
+                              "truncated": false
+                            },
+                            {
+                              "name": "TemplateWebPart.d.ts",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib\\webparts\\template\\TemplateWebPart.d.ts",
+                              "type": "file",
+                              "extension": ".ts",
+                              "size": 873
+                            },
+                            {
+                              "name": "TemplateWebPart.d.ts.map",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib\\webparts\\template\\TemplateWebPart.d.ts.map",
+                              "type": "file",
+                              "extension": ".map",
+                              "size": 765
+                            },
+                            {
+                              "name": "TemplateWebPart.js",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib\\webparts\\template\\TemplateWebPart.js",
+                              "type": "file",
+                              "extension": ".js",
+                              "size": 5766
+                            },
+                            {
+                              "name": "TemplateWebPart.js.map",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib\\webparts\\template\\TemplateWebPart.js.map",
+                              "type": "file",
+                              "extension": ".map",
+                              "size": 7348
+                            },
+                            {
+                              "name": "TemplateWebPart.manifest.json",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib\\webparts\\template\\TemplateWebPart.manifest.json",
+                              "type": "file",
+                              "extension": ".json",
+                              "size": 1146
+                            }
+                          ],
+                          "truncated": false
+                        }
+                      ],
+                      "truncated": false
+                    }
+                  ],
+                  "truncated": false
+                },
+                {
+                  "name": "lib-commonjs",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib-commonjs",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "Types",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib-commonjs\\Types",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "ITemplate",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib-commonjs\\Types\\ITemplate",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "ITemplateProps.js",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib-commonjs\\Types\\ITemplate\\ITemplateProps.js",
+                              "type": "file",
+                              "extension": ".js",
+                              "size": 119
+                            },
+                            {
+                              "name": "ITemplateProps.js.map",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib-commonjs\\Types\\ITemplate\\ITemplateProps.js.map",
+                              "type": "file",
+                              "extension": ".map",
+                              "size": 310
+                            }
+                          ],
+                          "truncated": false
+                        },
+                        {
+                          "name": "ITemplateWebPart",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib-commonjs\\Types\\ITemplateWebPart",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "ITemplateWebPart.js",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib-commonjs\\Types\\ITemplateWebPart\\ITemplateWebPart.js",
+                              "type": "file",
+                              "extension": ".js",
+                              "size": 121
+                            },
+                            {
+                              "name": "ITemplateWebPart.js.map",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib-commonjs\\Types\\ITemplateWebPart\\ITemplateWebPart.js.map",
+                              "type": "file",
+                              "extension": ".map",
+                              "size": 244
+                            }
+                          ],
+                          "truncated": false
+                        },
+                        {
+                          "name": "index.js",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib-commonjs\\Types\\index.js",
+                          "type": "file",
+                          "extension": ".js",
+                          "size": 291
+                        },
+                        {
+                          "name": "index.js.map",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib-commonjs\\Types\\index.js.map",
+                          "type": "file",
+                          "extension": ".map",
+                          "size": 263
+                        }
+                      ],
+                      "truncated": false
+                    },
+                    {
+                      "name": "webparts",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib-commonjs\\webparts",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "template",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib-commonjs\\webparts\\template",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "assets",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib-commonjs\\webparts\\template\\assets",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "welcome-dark.png",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib-commonjs\\webparts\\template\\assets\\welcome-dark.png",
+                                  "type": "file",
+                                  "extension": ".png",
+                                  "size": 12545
+                                },
+                                {
+                                  "name": "welcome-light.png",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib-commonjs\\webparts\\template\\assets\\welcome-light.png",
+                                  "type": "file",
+                                  "extension": ".png",
+                                  "size": 12816
+                                }
+                              ],
+                              "truncated": false
+                            },
+                            {
+                              "name": "components",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib-commonjs\\webparts\\template\\components",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "Template.js",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib-commonjs\\webparts\\template\\components\\Template.js",
+                                  "type": "file",
+                                  "extension": ".js",
+                                  "size": 3726
+                                },
+                                {
+                                  "name": "Template.js.map",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib-commonjs\\webparts\\template\\components\\Template.js.map",
+                                  "type": "file",
+                                  "extension": ".map",
+                                  "size": 4656
+                                },
+                                {
+                                  "name": "Template.module.scss.css",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib-commonjs\\webparts\\template\\components\\Template.module.scss.css",
+                                  "type": "file",
+                                  "extension": ".css",
+                                  "size": 704
+                                }
+                              ],
+                              "truncated": false
+                            },
+                            {
+                              "name": "loc",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib-commonjs\\webparts\\template\\loc",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "en-us.js",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib-commonjs\\webparts\\template\\loc\\en-us.js",
+                                  "type": "file",
+                                  "extension": ".js",
+                                  "size": 916
+                                }
+                              ],
+                              "truncated": false
+                            },
+                            {
+                              "name": "TemplateWebPart.js",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib-commonjs\\webparts\\template\\TemplateWebPart.js",
+                              "type": "file",
+                              "extension": ".js",
+                              "size": 5990
+                            },
+                            {
+                              "name": "TemplateWebPart.js.map",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib-commonjs\\webparts\\template\\TemplateWebPart.js.map",
+                              "type": "file",
+                              "extension": ".map",
+                              "size": 7161
+                            },
+                            {
+                              "name": "TemplateWebPart.manifest.json",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\lib-commonjs\\webparts\\template\\TemplateWebPart.manifest.json",
+                              "type": "file",
+                              "extension": ".json",
+                              "size": 1146
+                            }
+                          ],
+                          "truncated": false
+                        }
+                      ],
+                      "truncated": false
+                    }
+                  ],
+                  "truncated": false
+                },
+                {
+                  "name": "src",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\src",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "Types",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\src\\Types",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "ITemplate",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\src\\Types\\ITemplate",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "ITemplateProps.ts",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\src\\Types\\ITemplate\\ITemplateProps.ts",
+                              "type": "file",
+                              "extension": ".ts",
+                              "size": 140
+                            }
+                          ],
+                          "truncated": false
+                        },
+                        {
+                          "name": "ITemplateWebPart",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\src\\Types\\ITemplateWebPart",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "ITemplateWebPart.ts",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\src\\Types\\ITemplateWebPart\\ITemplateWebPart.ts",
+                              "type": "file",
+                              "extension": ".ts",
+                              "size": 66
+                            }
+                          ],
+                          "truncated": false
+                        },
+                        {
+                          "name": "index.ts",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\src\\Types\\index.ts",
+                          "type": "file",
+                          "extension": ".ts",
+                          "size": 97
+                        }
+                      ],
+                      "truncated": false
+                    },
+                    {
+                      "name": "webparts",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\src\\webparts",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "template",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\src\\webparts\\template",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "assets",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\src\\webparts\\template\\assets",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "welcome-dark.png",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\src\\webparts\\template\\assets\\welcome-dark.png",
+                                  "type": "file",
+                                  "extension": ".png",
+                                  "size": 12545
+                                },
+                                {
+                                  "name": "welcome-light.png",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\src\\webparts\\template\\assets\\welcome-light.png",
+                                  "type": "file",
+                                  "extension": ".png",
+                                  "size": 12816
+                                }
+                              ],
+                              "truncated": false
+                            },
+                            {
+                              "name": "components",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\src\\webparts\\template\\components",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "Template.module.scss",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\src\\webparts\\template\\components\\Template.module.scss",
+                                  "type": "file",
+                                  "extension": ".scss",
+                                  "size": 734
+                                },
+                                {
+                                  "name": "Template.tsx",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\src\\webparts\\template\\components\\Template.tsx",
+                                  "type": "file",
+                                  "extension": ".tsx",
+                                  "size": 3009
+                                }
+                              ],
+                              "truncated": false
+                            },
+                            {
+                              "name": "loc",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\src\\webparts\\template\\loc",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "en-us.js",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\src\\webparts\\template\\loc\\en-us.js",
+                                  "type": "file",
+                                  "extension": ".js",
+                                  "size": 916
+                                },
+                                {
+                                  "name": "mystrings.d.ts",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\src\\webparts\\template\\loc\\mystrings.d.ts",
+                                  "type": "file",
+                                  "extension": ".ts",
+                                  "size": 564
+                                }
+                              ],
+                              "truncated": false
+                            },
+                            {
+                              "name": "TemplateWebPart.manifest.json",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\src\\webparts\\template\\TemplateWebPart.manifest.json",
+                              "type": "file",
+                              "extension": ".json",
+                              "size": 1146
+                            },
+                            {
+                              "name": "TemplateWebPart.ts",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\src\\webparts\\template\\TemplateWebPart.ts",
+                              "type": "file",
+                              "extension": ".ts",
+                              "size": 4031
+                            }
+                          ],
+                          "truncated": false
+                        }
+                      ],
+                      "truncated": false
+                    },
+                    {
+                      "name": "custom.d.ts",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\src\\custom.d.ts",
+                      "type": "file",
+                      "extension": ".ts",
+                      "size": 70
+                    }
+                  ],
+                  "truncated": false
+                },
+                {
+                  "name": "teams",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\teams",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "08bb0d0d-1bde-4b76-aaa7-e38cccee0db2_color.png",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\teams\\08bb0d0d-1bde-4b76-aaa7-e38cccee0db2_color.png",
+                      "type": "file",
+                      "extension": ".png",
+                      "size": 10248
+                    },
+                    {
+                      "name": "08bb0d0d-1bde-4b76-aaa7-e38cccee0db2_outline.png",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\teams\\08bb0d0d-1bde-4b76-aaa7-e38cccee0db2_outline.png",
+                      "type": "file",
+                      "extension": ".png",
+                      "size": 249
+                    }
+                  ],
+                  "truncated": false
+                },
+                {
+                  "name": "temp",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\temp",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "build",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\temp\\build",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "copy-javascript",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\temp\\build\\copy-javascript",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "file-copy.json",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\temp\\build\\copy-javascript\\file-copy.json",
+                              "type": "file",
+                              "extension": ".json",
+                              "size": 176
+                            }
+                          ],
+                          "truncated": false
+                        },
+                        {
+                          "name": "typescript",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\temp\\build\\typescript",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "file-copy.json",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\temp\\build\\typescript\\file-copy.json",
+                              "type": "file",
+                              "extension": ".json",
+                              "size": 495
+                            }
+                          ],
+                          "truncated": false
+                        }
+                      ],
+                      "truncated": false
+                    },
+                    {
+                      "name": "sass-ts",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\temp\\sass-ts",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "webparts",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\temp\\sass-ts\\webparts",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "template",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\temp\\sass-ts\\webparts\\template",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "components",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\temp\\sass-ts\\webparts\\template\\components",
+                                  "type": "directory",
+                                  "children": [
+                                    {
+                                      "name": "Template.module.scss.d.ts",
+                                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\temp\\sass-ts\\webparts\\template\\components\\Template.module.scss.d.ts",
+                                      "type": "file",
+                                      "extension": ".ts",
+                                      "size": 312
+                                    }
+                                  ],
+                                  "truncated": false
+                                }
+                              ],
+                              "truncated": false
+                            }
+                          ],
+                          "truncated": false
+                        }
+                      ],
+                      "truncated": false
+                    }
+                  ],
+                  "truncated": false
+                },
+                {
+                  "name": ".eslintrc.js",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\.eslintrc.js",
+                  "type": "file",
+                  "extension": ".js",
+                  "size": 18375
+                },
+                {
+                  "name": ".gitignore",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\.gitignore",
+                  "type": "file",
+                  "extension": ".gitignore",
+                  "size": 381
+                },
+                {
+                  "name": ".npmignore",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\.npmignore",
+                  "type": "file",
+                  "extension": ".npmignore",
+                  "size": 464
+                },
+                {
+                  "name": ".yo-rc.json",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\.yo-rc.json",
+                  "type": "file",
+                  "extension": ".json",
+                  "size": 531
+                },
+                {
+                  "name": "package-lock.json",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\package-lock.json",
+                  "type": "file",
+                  "extension": ".json",
+                  "size": 741056
+                },
+                {
+                  "name": "package.json",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\package.json",
+                  "type": "file",
+                  "extension": ".json",
+                  "size": 1509
+                },
+                {
+                  "name": "README.md",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\README.md",
+                  "type": "file",
+                  "extension": ".md",
+                  "size": 2822
+                },
+                {
+                  "name": "tsconfig.json",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.22.2\\tsconfig.json",
+                  "type": "file",
+                  "extension": ".json",
+                  "size": 250
+                }
+              ],
+              "truncated": false
+            },
+            {
+              "name": "1.23.0",
+              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0",
+              "type": "directory",
+              "children": [
+                {
+                  "name": ".vscode",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\.vscode",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "launch.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\.vscode\\launch.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 641
+                    },
+                    {
+                      "name": "settings.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\.vscode\\settings.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 430
+                    }
+                  ],
+                  "truncated": false
+                },
+                {
+                  "name": "config",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\config",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "config.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\config\\config.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 489
+                    },
+                    {
+                      "name": "deploy-azure-storage.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\config\\deploy-azure-storage.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 254
+                    },
+                    {
+                      "name": "package-solution.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\config\\package-solution.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 1059
+                    },
+                    {
+                      "name": "rig.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\config\\rig.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 329
+                    },
+                    {
+                      "name": "sass.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\config\\sass.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 181
+                    },
+                    {
+                      "name": "serve.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\config\\serve.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 198
+                    },
+                    {
+                      "name": "typescript.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\config\\typescript.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 256
+                    },
+                    {
+                      "name": "write-manifests.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\config\\write-manifests.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 143
+                    }
+                  ],
+                  "truncated": false
+                },
+                {
+                  "name": "lib",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "Types",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib\\Types",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "ITemplate",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib\\Types\\ITemplate",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "ITemplateProps.d.ts",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib\\Types\\ITemplate\\ITemplateProps.d.ts",
+                              "type": "file",
+                              "extension": ".ts",
+                              "size": 192
+                            },
+                            {
+                              "name": "ITemplateProps.d.ts.map",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib\\Types\\ITemplate\\ITemplateProps.d.ts.map",
+                              "type": "file",
+                              "extension": ".map",
+                              "size": 275
+                            },
+                            {
+                              "name": "ITemplateProps.js",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib\\Types\\ITemplate\\ITemplateProps.js",
+                              "type": "file",
+                              "extension": ".js",
+                              "size": 53
+                            },
+                            {
+                              "name": "ITemplateProps.js.map",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib\\Types\\ITemplate\\ITemplateProps.js.map",
+                              "type": "file",
+                              "extension": ".map",
+                              "size": 310
+                            }
+                          ],
+                          "truncated": false
+                        },
+                        {
+                          "name": "ITemplateWebPart",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib\\Types\\ITemplateWebPart",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "ITemplateWebPart.d.ts",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib\\Types\\ITemplateWebPart\\ITemplateWebPart.d.ts",
+                              "type": "file",
+                              "extension": ".ts",
+                              "size": 114
+                            },
+                            {
+                              "name": "ITemplateWebPart.d.ts.map",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib\\Types\\ITemplateWebPart\\ITemplateWebPart.d.ts.map",
+                              "type": "file",
+                              "extension": ".map",
+                              "size": 208
+                            },
+                            {
+                              "name": "ITemplateWebPart.js",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib\\Types\\ITemplateWebPart\\ITemplateWebPart.js",
+                              "type": "file",
+                              "extension": ".js",
+                              "size": 55
+                            },
+                            {
+                              "name": "ITemplateWebPart.js.map",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib\\Types\\ITemplateWebPart\\ITemplateWebPart.js.map",
+                              "type": "file",
+                              "extension": ".map",
+                              "size": 244
+                            }
+                          ],
+                          "truncated": false
+                        },
+                        {
+                          "name": "index.d.ts",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib\\Types\\index.d.ts",
+                          "type": "file",
+                          "extension": ".ts",
+                          "size": 132
+                        },
+                        {
+                          "name": "index.d.ts.map",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib\\Types\\index.d.ts.map",
+                          "type": "file",
+                          "extension": ".map",
+                          "size": 157
+                        },
+                        {
+                          "name": "index.js",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib\\Types\\index.js",
+                          "type": "file",
+                          "extension": ".js",
+                          "size": 130
+                        },
+                        {
+                          "name": "index.js.map",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib\\Types\\index.js.map",
+                          "type": "file",
+                          "extension": ".map",
+                          "size": 280
+                        }
+                      ],
+                      "truncated": false
+                    },
+                    {
+                      "name": "webparts",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib\\webparts",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "template",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib\\webparts\\template",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "assets",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib\\webparts\\template\\assets",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "welcome-dark.png",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib\\webparts\\template\\assets\\welcome-dark.png",
+                                  "type": "file",
+                                  "extension": ".png",
+                                  "size": 12545
+                                },
+                                {
+                                  "name": "welcome-light.png",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib\\webparts\\template\\assets\\welcome-light.png",
+                                  "type": "file",
+                                  "extension": ".png",
+                                  "size": 12816
+                                }
+                              ],
+                              "truncated": false
+                            },
+                            {
+                              "name": "components",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib\\webparts\\template\\components",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "Template.d.ts",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib\\webparts\\template\\components\\Template.d.ts",
+                                  "type": "file",
+                                  "extension": ".ts",
+                                  "size": 149
+                                },
+                                {
+                                  "name": "Template.d.ts.map",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib\\webparts\\template\\components\\Template.d.ts.map",
+                                  "type": "file",
+                                  "extension": ".map",
+                                  "size": 251
+                                },
+                                {
+                                  "name": "Template.js",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib\\webparts\\template\\components\\Template.js",
+                                  "type": "file",
+                                  "extension": ".js",
+                                  "size": 3249
+                                },
+                                {
+                                  "name": "Template.js.map",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib\\webparts\\template\\components\\Template.js.map",
+                                  "type": "file",
+                                  "extension": ".map",
+                                  "size": 4734
+                                },
+                                {
+                                  "name": "Template.module.scss.css",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib\\webparts\\template\\components\\Template.module.scss.css",
+                                  "type": "file",
+                                  "extension": ".css",
+                                  "size": 704
+                                }
+                              ],
+                              "truncated": false
+                            },
+                            {
+                              "name": "loc",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib\\webparts\\template\\loc",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "en-us.js",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib\\webparts\\template\\loc\\en-us.js",
+                                  "type": "file",
+                                  "extension": ".js",
+                                  "size": 916
+                                }
+                              ],
+                              "truncated": false
+                            },
+                            {
+                              "name": "TemplateWebPart.d.ts",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib\\webparts\\template\\TemplateWebPart.d.ts",
+                              "type": "file",
+                              "extension": ".ts",
+                              "size": 831
+                            },
+                            {
+                              "name": "TemplateWebPart.d.ts.map",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib\\webparts\\template\\TemplateWebPart.d.ts.map",
+                              "type": "file",
+                              "extension": ".map",
+                              "size": 750
+                            },
+                            {
+                              "name": "TemplateWebPart.js",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib\\webparts\\template\\TemplateWebPart.js",
+                              "type": "file",
+                              "extension": ".js",
+                              "size": 4872
+                            },
+                            {
+                              "name": "TemplateWebPart.js.map",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib\\webparts\\template\\TemplateWebPart.js.map",
+                              "type": "file",
+                              "extension": ".map",
+                              "size": 7330
+                            },
+                            {
+                              "name": "TemplateWebPart.manifest.json",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib\\webparts\\template\\TemplateWebPart.manifest.json",
+                              "type": "file",
+                              "extension": ".json",
+                              "size": 1146
+                            }
+                          ],
+                          "truncated": false
+                        }
+                      ],
+                      "truncated": false
+                    }
+                  ],
+                  "truncated": false
+                },
+                {
+                  "name": "lib-commonjs",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib-commonjs",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "Types",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib-commonjs\\Types",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "ITemplate",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib-commonjs\\Types\\ITemplate",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "ITemplateProps.js",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib-commonjs\\Types\\ITemplate\\ITemplateProps.js",
+                              "type": "file",
+                              "extension": ".js",
+                              "size": 119
+                            },
+                            {
+                              "name": "ITemplateProps.js.map",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib-commonjs\\Types\\ITemplate\\ITemplateProps.js.map",
+                              "type": "file",
+                              "extension": ".map",
+                              "size": 310
+                            }
+                          ],
+                          "truncated": false
+                        },
+                        {
+                          "name": "ITemplateWebPart",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib-commonjs\\Types\\ITemplateWebPart",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "ITemplateWebPart.js",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib-commonjs\\Types\\ITemplateWebPart\\ITemplateWebPart.js",
+                              "type": "file",
+                              "extension": ".js",
+                              "size": 121
+                            },
+                            {
+                              "name": "ITemplateWebPart.js.map",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib-commonjs\\Types\\ITemplateWebPart\\ITemplateWebPart.js.map",
+                              "type": "file",
+                              "extension": ".map",
+                              "size": 244
+                            }
+                          ],
+                          "truncated": false
+                        },
+                        {
+                          "name": "index.js",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib-commonjs\\Types\\index.js",
+                          "type": "file",
+                          "extension": ".js",
+                          "size": 291
+                        },
+                        {
+                          "name": "index.js.map",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib-commonjs\\Types\\index.js.map",
+                          "type": "file",
+                          "extension": ".map",
+                          "size": 263
+                        }
+                      ],
+                      "truncated": false
+                    },
+                    {
+                      "name": "webparts",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib-commonjs\\webparts",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "template",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib-commonjs\\webparts\\template",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "assets",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib-commonjs\\webparts\\template\\assets",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "welcome-dark.png",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib-commonjs\\webparts\\template\\assets\\welcome-dark.png",
+                                  "type": "file",
+                                  "extension": ".png",
+                                  "size": 12545
+                                },
+                                {
+                                  "name": "welcome-light.png",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib-commonjs\\webparts\\template\\assets\\welcome-light.png",
+                                  "type": "file",
+                                  "extension": ".png",
+                                  "size": 12816
+                                }
+                              ],
+                              "truncated": false
+                            },
+                            {
+                              "name": "components",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib-commonjs\\webparts\\template\\components",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "Template.js",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib-commonjs\\webparts\\template\\components\\Template.js",
+                                  "type": "file",
+                                  "extension": ".js",
+                                  "size": 3726
+                                },
+                                {
+                                  "name": "Template.js.map",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib-commonjs\\webparts\\template\\components\\Template.js.map",
+                                  "type": "file",
+                                  "extension": ".map",
+                                  "size": 4656
+                                },
+                                {
+                                  "name": "Template.module.scss.css",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib-commonjs\\webparts\\template\\components\\Template.module.scss.css",
+                                  "type": "file",
+                                  "extension": ".css",
+                                  "size": 704
+                                }
+                              ],
+                              "truncated": false
+                            },
+                            {
+                              "name": "loc",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib-commonjs\\webparts\\template\\loc",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "en-us.js",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib-commonjs\\webparts\\template\\loc\\en-us.js",
+                                  "type": "file",
+                                  "extension": ".js",
+                                  "size": 916
+                                }
+                              ],
+                              "truncated": false
+                            },
+                            {
+                              "name": "TemplateWebPart.js",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib-commonjs\\webparts\\template\\TemplateWebPart.js",
+                              "type": "file",
+                              "extension": ".js",
+                              "size": 5116
+                            },
+                            {
+                              "name": "TemplateWebPart.js.map",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib-commonjs\\webparts\\template\\TemplateWebPart.js.map",
+                              "type": "file",
+                              "extension": ".map",
+                              "size": 7153
+                            },
+                            {
+                              "name": "TemplateWebPart.manifest.json",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\lib-commonjs\\webparts\\template\\TemplateWebPart.manifest.json",
+                              "type": "file",
+                              "extension": ".json",
+                              "size": 1146
+                            }
+                          ],
+                          "truncated": false
+                        }
+                      ],
+                      "truncated": false
+                    }
+                  ],
+                  "truncated": false
+                },
+                {
+                  "name": "src",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\src",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "Types",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\src\\Types",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "ITemplate",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\src\\Types\\ITemplate",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "ITemplateProps.ts",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\src\\Types\\ITemplate\\ITemplateProps.ts",
+                              "type": "file",
+                              "extension": ".ts",
+                              "size": 140
+                            }
+                          ],
+                          "truncated": false
+                        },
+                        {
+                          "name": "ITemplateWebPart",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\src\\Types\\ITemplateWebPart",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "ITemplateWebPart.ts",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\src\\Types\\ITemplateWebPart\\ITemplateWebPart.ts",
+                              "type": "file",
+                              "extension": ".ts",
+                              "size": 66
+                            }
+                          ],
+                          "truncated": false
+                        },
+                        {
+                          "name": "index.ts",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\src\\Types\\index.ts",
+                          "type": "file",
+                          "extension": ".ts",
+                          "size": 97
+                        }
+                      ],
+                      "truncated": false
+                    },
+                    {
+                      "name": "webparts",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\src\\webparts",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "template",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\src\\webparts\\template",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "assets",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\src\\webparts\\template\\assets",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "welcome-dark.png",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\src\\webparts\\template\\assets\\welcome-dark.png",
+                                  "type": "file",
+                                  "extension": ".png",
+                                  "size": 12545
+                                },
+                                {
+                                  "name": "welcome-light.png",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\src\\webparts\\template\\assets\\welcome-light.png",
+                                  "type": "file",
+                                  "extension": ".png",
+                                  "size": 12816
+                                }
+                              ],
+                              "truncated": false
+                            },
+                            {
+                              "name": "components",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\src\\webparts\\template\\components",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "Template.module.scss",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\src\\webparts\\template\\components\\Template.module.scss",
+                                  "type": "file",
+                                  "extension": ".scss",
+                                  "size": 737
+                                },
+                                {
+                                  "name": "Template.tsx",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\src\\webparts\\template\\components\\Template.tsx",
+                                  "type": "file",
+                                  "extension": ".tsx",
+                                  "size": 3009
+                                }
+                              ],
+                              "truncated": false
+                            },
+                            {
+                              "name": "loc",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\src\\webparts\\template\\loc",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "en-us.js",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\src\\webparts\\template\\loc\\en-us.js",
+                                  "type": "file",
+                                  "extension": ".js",
+                                  "size": 916
+                                },
+                                {
+                                  "name": "mystrings.d.ts",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\src\\webparts\\template\\loc\\mystrings.d.ts",
+                                  "type": "file",
+                                  "extension": ".ts",
+                                  "size": 564
+                                }
+                              ],
+                              "truncated": false
+                            },
+                            {
+                              "name": "TemplateWebPart.manifest.json",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\src\\webparts\\template\\TemplateWebPart.manifest.json",
+                              "type": "file",
+                              "extension": ".json",
+                              "size": 828
+                            },
+                            {
+                              "name": "TemplateWebPart.ts",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\src\\webparts\\template\\TemplateWebPart.ts",
+                              "type": "file",
+                              "extension": ".ts",
+                              "size": 4080
+                            }
+                          ],
+                          "truncated": false
+                        }
+                      ],
+                      "truncated": false
+                    }
+                  ],
+                  "truncated": false
+                },
+                {
+                  "name": "teams",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\teams",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "a3b86f9d-3bfc-460f-a538-1496689811e8_color.png",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\teams\\a3b86f9d-3bfc-460f-a538-1496689811e8_color.png",
+                      "type": "file",
+                      "extension": ".png",
+                      "size": 10248
+                    },
+                    {
+                      "name": "a3b86f9d-3bfc-460f-a538-1496689811e8_outline.png",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\teams\\a3b86f9d-3bfc-460f-a538-1496689811e8_outline.png",
+                      "type": "file",
+                      "extension": ".png",
+                      "size": 249
+                    }
+                  ],
+                  "truncated": false
+                },
+                {
+                  "name": "temp",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\temp",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "build",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\temp\\build",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "copy-javascript",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\temp\\build\\copy-javascript",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "file-copy.json",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\temp\\build\\copy-javascript\\file-copy.json",
+                              "type": "file",
+                              "extension": ".json",
+                              "size": 176
+                            }
+                          ],
+                          "truncated": false
+                        },
+                        {
+                          "name": "sass",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\temp\\build\\sass",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "sass_DZH",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\temp\\build\\sass\\sass_DZH",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "p43F.json",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\temp\\build\\sass\\sass_DZH\\p43F.json",
+                                  "type": "file",
+                                  "extension": ".json",
+                                  "size": 4405
+                                }
+                              ],
+                              "truncated": false
+                            }
+                          ],
+                          "truncated": false
+                        },
+                        {
+                          "name": "static-asset-typings",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\temp\\build\\static-asset-typings",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "static-assets.json",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\temp\\build\\static-asset-typings\\static-assets.json",
+                              "type": "file",
+                              "extension": ".json",
+                              "size": 168
+                            }
+                          ],
+                          "truncated": false
+                        },
+                        {
+                          "name": "typescript",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\temp\\build\\typescript",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "file-copy.json",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\temp\\build\\typescript\\file-copy.json",
+                              "type": "file",
+                              "extension": ".json",
+                              "size": 495
+                            }
+                          ],
+                          "truncated": false
+                        }
+                      ],
+                      "truncated": false
+                    },
+                    {
+                      "name": "sass-ts",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\temp\\sass-ts",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "webparts",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\temp\\sass-ts\\webparts",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "template",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\temp\\sass-ts\\webparts\\template",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "components",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\temp\\sass-ts\\webparts\\template\\components",
+                                  "type": "directory",
+                                  "children": [
+                                    {
+                                      "name": "Template.module.scss.d.ts",
+                                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\temp\\sass-ts\\webparts\\template\\components\\Template.module.scss.d.ts",
+                                      "type": "file",
+                                      "extension": ".ts",
+                                      "size": 180
+                                    }
+                                  ],
+                                  "truncated": false
+                                }
+                              ],
+                              "truncated": false
+                            }
+                          ],
+                          "truncated": false
+                        }
+                      ],
+                      "truncated": false
+                    },
+                    {
+                      "name": "static-asset-ts",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\temp\\static-asset-ts",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "webparts",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\temp\\static-asset-ts\\webparts",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "template",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\temp\\static-asset-ts\\webparts\\template",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "assets",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\temp\\static-asset-ts\\webparts\\template\\assets",
+                                  "type": "directory",
+                                  "children": [
+                                    {
+                                      "name": "welcome-dark.png.d.ts",
+                                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\temp\\static-asset-ts\\webparts\\template\\assets\\welcome-dark.png.d.ts",
+                                      "type": "file",
+                                      "extension": ".ts",
+                                      "size": 166
+                                    },
+                                    {
+                                      "name": "welcome-light.png.d.ts",
+                                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\temp\\static-asset-ts\\webparts\\template\\assets\\welcome-light.png.d.ts",
+                                      "type": "file",
+                                      "extension": ".ts",
+                                      "size": 166
+                                    }
+                                  ],
+                                  "truncated": false
+                                }
+                              ],
+                              "truncated": false
+                            }
+                          ],
+                          "truncated": false
+                        }
+                      ],
+                      "truncated": false
+                    }
+                  ],
+                  "truncated": false
+                },
+                {
+                  "name": ".gitignore",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\.gitignore",
+                  "type": "file",
+                  "extension": ".gitignore",
+                  "size": 381
+                },
+                {
+                  "name": ".npmignore",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\.npmignore",
+                  "type": "file",
+                  "extension": ".npmignore",
+                  "size": 464
+                },
+                {
+                  "name": ".yo-rc.json",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\.yo-rc.json",
+                  "type": "file",
+                  "extension": ".json",
+                  "size": 525
+                },
+                {
+                  "name": "eslint.config.js",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\eslint.config.js",
+                  "type": "file",
+                  "extension": ".js",
+                  "size": 302
+                },
+                {
+                  "name": "package-lock.json",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\package-lock.json",
+                  "type": "file",
+                  "extension": ".json",
+                  "size": 735640
+                },
+                {
+                  "name": "package.json",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\package.json",
+                  "type": "file",
+                  "extension": ".json",
+                  "size": 1421
+                },
+                {
+                  "name": "README.md",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\README.md",
+                  "type": "file",
+                  "extension": ".md",
+                  "size": 2820
+                },
+                {
+                  "name": "tsconfig.json",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.0\\tsconfig.json",
+                  "type": "file",
+                  "extension": ".json",
+                  "size": 250
+                }
+              ],
+              "truncated": false
+            },
+            {
+              "name": "1.23.2",
+              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2",
+              "type": "directory",
+              "children": [
+                {
+                  "name": ".vscode",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\.vscode",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "launch.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\.vscode\\launch.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 641
+                    },
+                    {
+                      "name": "settings.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\.vscode\\settings.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 430
+                    }
+                  ],
+                  "truncated": false
+                },
+                {
+                  "name": "config",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\config",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "config.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\config\\config.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 489
+                    },
+                    {
+                      "name": "deploy-azure-storage.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\config\\deploy-azure-storage.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 254
+                    },
+                    {
+                      "name": "package-solution.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\config\\package-solution.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 1059
+                    },
+                    {
+                      "name": "rig.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\config\\rig.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 329
+                    },
+                    {
+                      "name": "sass.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\config\\sass.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 181
+                    },
+                    {
+                      "name": "serve.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\config\\serve.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 198
+                    },
+                    {
+                      "name": "typescript.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\config\\typescript.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 256
+                    },
+                    {
+                      "name": "write-manifests.json",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\config\\write-manifests.json",
+                      "type": "file",
+                      "extension": ".json",
+                      "size": 143
+                    }
+                  ],
+                  "truncated": false
+                },
+                {
+                  "name": "lib",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "Types",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib\\Types",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "ITemplate",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib\\Types\\ITemplate",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "ITemplateProps.d.ts",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib\\Types\\ITemplate\\ITemplateProps.d.ts",
+                              "type": "file",
+                              "extension": ".ts",
+                              "size": 192
+                            },
+                            {
+                              "name": "ITemplateProps.d.ts.map",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib\\Types\\ITemplate\\ITemplateProps.d.ts.map",
+                              "type": "file",
+                              "extension": ".map",
+                              "size": 275
+                            },
+                            {
+                              "name": "ITemplateProps.js",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib\\Types\\ITemplate\\ITemplateProps.js",
+                              "type": "file",
+                              "extension": ".js",
+                              "size": 53
+                            },
+                            {
+                              "name": "ITemplateProps.js.map",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib\\Types\\ITemplate\\ITemplateProps.js.map",
+                              "type": "file",
+                              "extension": ".map",
+                              "size": 310
+                            }
+                          ],
+                          "truncated": false
+                        },
+                        {
+                          "name": "index.d.ts",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib\\Types\\index.d.ts",
+                          "type": "file",
+                          "extension": ".ts",
+                          "size": 79
+                        },
+                        {
+                          "name": "index.d.ts.map",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib\\Types\\index.d.ts.map",
+                          "type": "file",
+                          "extension": ".map",
+                          "size": 134
+                        },
+                        {
+                          "name": "index.js",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib\\Types\\index.js",
+                          "type": "file",
+                          "extension": ".js",
+                          "size": 77
+                        },
+                        {
+                          "name": "index.js.map",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib\\Types\\index.js.map",
+                          "type": "file",
+                          "extension": ".map",
+                          "size": 201
+                        }
+                      ],
+                      "truncated": false
+                    },
+                    {
+                      "name": "webparts",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib\\webparts",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "template",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib\\webparts\\template",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "assets",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib\\webparts\\template\\assets",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "welcome-dark.png",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib\\webparts\\template\\assets\\welcome-dark.png",
+                                  "type": "file",
+                                  "extension": ".png",
+                                  "size": 12545
+                                },
+                                {
+                                  "name": "welcome-light.png",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib\\webparts\\template\\assets\\welcome-light.png",
+                                  "type": "file",
+                                  "extension": ".png",
+                                  "size": 12816
+                                }
+                              ],
+                              "truncated": false
+                            },
+                            {
+                              "name": "components",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib\\webparts\\template\\components",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "ITemplateProps.d.ts",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib\\webparts\\template\\components\\ITemplateProps.d.ts",
+                                  "type": "file",
+                                  "extension": ".ts",
+                                  "size": 192
+                                },
+                                {
+                                  "name": "ITemplateProps.d.ts.map",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib\\webparts\\template\\components\\ITemplateProps.d.ts.map",
+                                  "type": "file",
+                                  "extension": ".map",
+                                  "size": 291
+                                },
+                                {
+                                  "name": "ITemplateProps.js",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib\\webparts\\template\\components\\ITemplateProps.js",
+                                  "type": "file",
+                                  "extension": ".js",
+                                  "size": 53
+                                },
+                                {
+                                  "name": "ITemplateProps.js.map",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib\\webparts\\template\\components\\ITemplateProps.js.map",
+                                  "type": "file",
+                                  "extension": ".map",
+                                  "size": 326
+                                },
+                                {
+                                  "name": "Template.d.ts",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib\\webparts\\template\\components\\Template.d.ts",
+                                  "type": "file",
+                                  "extension": ".ts",
+                                  "size": 149
+                                },
+                                {
+                                  "name": "Template.d.ts.map",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib\\webparts\\template\\components\\Template.d.ts.map",
+                                  "type": "file",
+                                  "extension": ".map",
+                                  "size": 251
+                                },
+                                {
+                                  "name": "Template.js",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib\\webparts\\template\\components\\Template.js",
+                                  "type": "file",
+                                  "extension": ".js",
+                                  "size": 3249
+                                },
+                                {
+                                  "name": "Template.js.map",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib\\webparts\\template\\components\\Template.js.map",
+                                  "type": "file",
+                                  "extension": ".map",
+                                  "size": 4734
+                                },
+                                {
+                                  "name": "Template.module.scss.css",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib\\webparts\\template\\components\\Template.module.scss.css",
+                                  "type": "file",
+                                  "extension": ".css",
+                                  "size": 497
+                                },
+                                {
+                                  "name": "Template.module.scss.css.map",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib\\webparts\\template\\components\\Template.module.scss.css.map",
+                                  "type": "file",
+                                  "extension": ".map",
+                                  "size": 939
+                                }
+                              ],
+                              "truncated": false
+                            },
+                            {
+                              "name": "loc",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib\\webparts\\template\\loc",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "en-us.js",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib\\webparts\\template\\loc\\en-us.js",
+                                  "type": "file",
+                                  "extension": ".js",
+                                  "size": 916
+                                }
+                              ],
+                              "truncated": false
+                            },
+                            {
+                              "name": "TemplateWebPart.d.ts",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib\\webparts\\template\\TemplateWebPart.d.ts",
+                              "type": "file",
+                              "extension": ".ts",
+                              "size": 852
+                            },
+                            {
+                              "name": "TemplateWebPart.d.ts.map",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib\\webparts\\template\\TemplateWebPart.d.ts.map",
+                              "type": "file",
+                              "extension": ".map",
+                              "size": 739
+                            },
+                            {
+                              "name": "TemplateWebPart.js",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib\\webparts\\template\\TemplateWebPart.js",
+                              "type": "file",
+                              "extension": ".js",
+                              "size": 5571
+                            },
+                            {
+                              "name": "TemplateWebPart.js.map",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib\\webparts\\template\\TemplateWebPart.js.map",
+                              "type": "file",
+                              "extension": ".map",
+                              "size": 7271
+                            },
+                            {
+                              "name": "TemplateWebPart.manifest.json",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib\\webparts\\template\\TemplateWebPart.manifest.json",
+                              "type": "file",
+                              "extension": ".json",
+                              "size": 1146
+                            }
+                          ],
+                          "truncated": false
+                        }
+                      ],
+                      "truncated": false
+                    }
+                  ],
+                  "truncated": false
+                },
+                {
+                  "name": "lib-commonjs",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib-commonjs",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "webparts",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib-commonjs\\webparts",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "template",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib-commonjs\\webparts\\template",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "assets",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib-commonjs\\webparts\\template\\assets",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "welcome-dark.png",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib-commonjs\\webparts\\template\\assets\\welcome-dark.png",
+                                  "type": "file",
+                                  "extension": ".png",
+                                  "size": 12545
+                                },
+                                {
+                                  "name": "welcome-light.png",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib-commonjs\\webparts\\template\\assets\\welcome-light.png",
+                                  "type": "file",
+                                  "extension": ".png",
+                                  "size": 12816
+                                }
+                              ],
+                              "truncated": false
+                            },
+                            {
+                              "name": "components",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib-commonjs\\webparts\\template\\components",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "ITemplateProps.js",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib-commonjs\\webparts\\template\\components\\ITemplateProps.js",
+                                  "type": "file",
+                                  "extension": ".js",
+                                  "size": 119
+                                },
+                                {
+                                  "name": "ITemplateProps.js.map",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib-commonjs\\webparts\\template\\components\\ITemplateProps.js.map",
+                                  "type": "file",
+                                  "extension": ".map",
+                                  "size": 326
+                                },
+                                {
+                                  "name": "Template.js",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib-commonjs\\webparts\\template\\components\\Template.js",
+                                  "type": "file",
+                                  "extension": ".js",
+                                  "size": 3726
+                                },
+                                {
+                                  "name": "Template.js.map",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib-commonjs\\webparts\\template\\components\\Template.js.map",
+                                  "type": "file",
+                                  "extension": ".map",
+                                  "size": 4672
+                                },
+                                {
+                                  "name": "Template.module.scss.css",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib-commonjs\\webparts\\template\\components\\Template.module.scss.css",
+                                  "type": "file",
+                                  "extension": ".css",
+                                  "size": 497
+                                },
+                                {
+                                  "name": "Template.module.scss.css.map",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib-commonjs\\webparts\\template\\components\\Template.module.scss.css.map",
+                                  "type": "file",
+                                  "extension": ".map",
+                                  "size": 939
+                                }
+                              ],
+                              "truncated": false
+                            },
+                            {
+                              "name": "loc",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib-commonjs\\webparts\\template\\loc",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "en-us.js",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib-commonjs\\webparts\\template\\loc\\en-us.js",
+                                  "type": "file",
+                                  "extension": ".js",
+                                  "size": 916
+                                }
+                              ],
+                              "truncated": false
+                            },
+                            {
+                              "name": "TemplateWebPart.js",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib-commonjs\\webparts\\template\\TemplateWebPart.js",
+                              "type": "file",
+                              "extension": ".js",
+                              "size": 5819
+                            },
+                            {
+                              "name": "TemplateWebPart.js.map",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib-commonjs\\webparts\\template\\TemplateWebPart.js.map",
+                              "type": "file",
+                              "extension": ".map",
+                              "size": 7102
+                            },
+                            {
+                              "name": "TemplateWebPart.manifest.json",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\lib-commonjs\\webparts\\template\\TemplateWebPart.manifest.json",
+                              "type": "file",
+                              "extension": ".json",
+                              "size": 1146
+                            }
+                          ],
+                          "truncated": false
+                        }
+                      ],
+                      "truncated": false
+                    }
+                  ],
+                  "truncated": false
+                },
+                {
+                  "name": "src",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\src",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "Types",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\src\\Types",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "ITemplate",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\src\\Types\\ITemplate",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "ITemplateProps.ts",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\src\\Types\\ITemplate\\ITemplateProps.ts",
+                              "type": "file",
+                              "extension": ".ts",
+                              "size": 140
+                            }
+                          ],
+                          "truncated": false
+                        },
+                        {
+                          "name": "ITemplateWebPart",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\src\\Types\\ITemplateWebPart",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "ITemplateWebPart.ts",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\src\\Types\\ITemplateWebPart\\ITemplateWebPart.ts",
+                              "type": "file",
+                              "extension": ".ts",
+                              "size": 66
+                            }
+                          ],
+                          "truncated": false
+                        },
+                        {
+                          "name": "index.ts",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\src\\Types\\index.ts",
+                          "type": "file",
+                          "extension": ".ts",
+                          "size": 97
+                        }
+                      ],
+                      "truncated": false
+                    },
+                    {
+                      "name": "webparts",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\src\\webparts",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "template",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\src\\webparts\\template",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "assets",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\src\\webparts\\template\\assets",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "welcome-dark.png",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\src\\webparts\\template\\assets\\welcome-dark.png",
+                                  "type": "file",
+                                  "extension": ".png",
+                                  "size": 12545
+                                },
+                                {
+                                  "name": "welcome-light.png",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\src\\webparts\\template\\assets\\welcome-light.png",
+                                  "type": "file",
+                                  "extension": ".png",
+                                  "size": 12816
+                                }
+                              ],
+                              "truncated": false
+                            },
+                            {
+                              "name": "components",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\src\\webparts\\template\\components",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "Template.module.scss",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\src\\webparts\\template\\components\\Template.module.scss",
+                                  "type": "file",
+                                  "extension": ".scss",
+                                  "size": 619
+                                },
+                                {
+                                  "name": "Template.tsx",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\src\\webparts\\template\\components\\Template.tsx",
+                                  "type": "file",
+                                  "extension": ".tsx",
+                                  "size": 3009
+                                }
+                              ],
+                              "truncated": false
+                            },
+                            {
+                              "name": "loc",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\src\\webparts\\template\\loc",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "en-us.js",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\src\\webparts\\template\\loc\\en-us.js",
+                                  "type": "file",
+                                  "extension": ".js",
+                                  "size": 916
+                                },
+                                {
+                                  "name": "mystrings.d.ts",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\src\\webparts\\template\\loc\\mystrings.d.ts",
+                                  "type": "file",
+                                  "extension": ".ts",
+                                  "size": 564
+                                }
+                              ],
+                              "truncated": false
+                            },
+                            {
+                              "name": "TemplateWebPart.manifest.json",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\src\\webparts\\template\\TemplateWebPart.manifest.json",
+                              "type": "file",
+                              "extension": ".json",
+                              "size": 825
+                            },
+                            {
+                              "name": "TemplateWebPart.ts",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\src\\webparts\\template\\TemplateWebPart.ts",
+                              "type": "file",
+                              "extension": ".ts",
+                              "size": 4031
+                            }
+                          ],
+                          "truncated": false
+                        }
+                      ],
+                      "truncated": false
+                    }
+                  ],
+                  "truncated": false
+                },
+                {
+                  "name": "teams",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\teams",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "74f2a33c-1422-48b0-8443-11d4c6f3b1ca_color.png",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\teams\\74f2a33c-1422-48b0-8443-11d4c6f3b1ca_color.png",
+                      "type": "file",
+                      "extension": ".png",
+                      "size": 10248
+                    },
+                    {
+                      "name": "74f2a33c-1422-48b0-8443-11d4c6f3b1ca_outline.png",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\teams\\74f2a33c-1422-48b0-8443-11d4c6f3b1ca_outline.png",
+                      "type": "file",
+                      "extension": ".png",
+                      "size": 249
+                    }
+                  ],
+                  "truncated": false
+                },
+                {
+                  "name": "temp",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\temp",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "name": "build",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\temp\\build",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "copy-javascript",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\temp\\build\\copy-javascript",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "file-copy.json",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\temp\\build\\copy-javascript\\file-copy.json",
+                              "type": "file",
+                              "extension": ".json",
+                              "size": 176
+                            }
+                          ],
+                          "truncated": false
+                        },
+                        {
+                          "name": "sass",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\temp\\build\\sass",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "sass_sm4aGHAx.json",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\temp\\build\\sass\\sass_sm4aGHAx.json",
+                              "type": "file",
+                              "extension": ".json",
+                              "size": 178
+                            }
+                          ],
+                          "truncated": false
+                        },
+                        {
+                          "name": "static-asset-typings",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\temp\\build\\static-asset-typings",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "static-assets.json",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\temp\\build\\static-asset-typings\\static-assets.json",
+                              "type": "file",
+                              "extension": ".json",
+                              "size": 168
+                            }
+                          ],
+                          "truncated": false
+                        },
+                        {
+                          "name": "typescript",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\temp\\build\\typescript",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "file-copy.json",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\temp\\build\\typescript\\file-copy.json",
+                              "type": "file",
+                              "extension": ".json",
+                              "size": 495
+                            }
+                          ],
+                          "truncated": false
+                        }
+                      ],
+                      "truncated": false
+                    },
+                    {
+                      "name": "sass-ts",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\temp\\sass-ts",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "webparts",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\temp\\sass-ts\\webparts",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "template",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\temp\\sass-ts\\webparts\\template",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "components",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\temp\\sass-ts\\webparts\\template\\components",
+                                  "type": "directory",
+                                  "children": [
+                                    {
+                                      "name": "Template.module.scss.d.ts",
+                                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\temp\\sass-ts\\webparts\\template\\components\\Template.module.scss.d.ts",
+                                      "type": "file",
+                                      "extension": ".ts",
+                                      "size": 163
+                                    }
+                                  ],
+                                  "truncated": false
+                                }
+                              ],
+                              "truncated": false
+                            }
+                          ],
+                          "truncated": false
+                        }
+                      ],
+                      "truncated": false
+                    },
+                    {
+                      "name": "static-asset-ts",
+                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\temp\\static-asset-ts",
+                      "type": "directory",
+                      "children": [
+                        {
+                          "name": "webparts",
+                          "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\temp\\static-asset-ts\\webparts",
+                          "type": "directory",
+                          "children": [
+                            {
+                              "name": "template",
+                              "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\temp\\static-asset-ts\\webparts\\template",
+                              "type": "directory",
+                              "children": [
+                                {
+                                  "name": "assets",
+                                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\temp\\static-asset-ts\\webparts\\template\\assets",
+                                  "type": "directory",
+                                  "children": [
+                                    {
+                                      "name": "welcome-dark.png.d.ts",
+                                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\temp\\static-asset-ts\\webparts\\template\\assets\\welcome-dark.png.d.ts",
+                                      "type": "file",
+                                      "extension": ".ts",
+                                      "size": 166
+                                    },
+                                    {
+                                      "name": "welcome-light.png.d.ts",
+                                      "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\temp\\static-asset-ts\\webparts\\template\\assets\\welcome-light.png.d.ts",
+                                      "type": "file",
+                                      "extension": ".ts",
+                                      "size": 166
+                                    }
+                                  ],
+                                  "truncated": false
+                                }
+                              ],
+                              "truncated": false
+                            }
+                          ],
+                          "truncated": false
+                        }
+                      ],
+                      "truncated": false
+                    }
+                  ],
+                  "truncated": false
+                },
+                {
+                  "name": ".gitignore",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\.gitignore",
+                  "type": "file",
+                  "extension": ".gitignore",
+                  "size": 381
+                },
+                {
+                  "name": ".npmignore",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\.npmignore",
+                  "type": "file",
+                  "extension": ".npmignore",
+                  "size": 464
+                },
+                {
+                  "name": ".yo-rc.json",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\.yo-rc.json",
+                  "type": "file",
+                  "extension": ".json",
+                  "size": 525
+                },
+                {
+                  "name": "eslint.config.js",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\eslint.config.js",
+                  "type": "file",
+                  "extension": ".js",
+                  "size": 302
+                },
+                {
+                  "name": "package-lock.json",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\package-lock.json",
+                  "type": "file",
+                  "extension": ".json",
+                  "size": 735640
+                },
+                {
+                  "name": "package.json",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\package.json",
+                  "type": "file",
+                  "extension": ".json",
+                  "size": 1421
+                },
+                {
+                  "name": "README.md",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\README.md",
+                  "type": "file",
+                  "extension": ".md",
+                  "size": 2820
+                },
+                {
+                  "name": "tsconfig.json",
+                  "path": "E:\\Forge.Scaffold.Templates\\generators\\spfx-webpart\\1.23.2\\tsconfig.json",
+                  "type": "file",
+                  "extension": ".json",
+                  "size": 250
+                }
+              ],
+              "truncated": false
+            }
+          ],
+          "truncated": false
+        },
+        {
+          "name": "vite-react",
+          "path": "E:\\Forge.Scaffold.Templates\\generators\\vite-react",
+          "type": "directory",
+          "children": [],
+          "truncated": false
+        }
+      ],
+      "truncated": false
+    },
+    {
+      "name": "tools",
+      "path": "E:\\Forge.Scaffold.Templates\\tools",
+      "type": "directory",
+      "children": [],
+      "truncated": false
+    },
+    {
+      "name": "CurrentVersions.md",
+      "path": "E:\\Forge.Scaffold.Templates\\CurrentVersions.md",
+      "type": "file",
+      "extension": ".md",
+      "size": 2037
+    },
+    {
+      "name": "DirectoryTress.ps1",
+      "path": "E:\\Forge.Scaffold.Templates\\DirectoryTress.ps1",
+      "type": "file",
+      "extension": ".ps1",
+      "size": 2730
+    }
+  ],
+  "truncated": false
+}
