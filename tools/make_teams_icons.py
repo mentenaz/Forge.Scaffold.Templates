@@ -7,7 +7,7 @@ The sheet holds a colour icon (left) and a white outline icon (right) on a
 checkerboard that is part of the picture (no real transparency). Writes into
 layers/assets/common/:
 
-    teams-color-192.png     192x192, full colour, transparent corners
+    teams-color-192.png     192x192, 256-colour palette, transparent corners
     teams-outline-32.png    32x32, white shape on transparent
 
 The coordinates below are for the sheet "Mentenaz Forge Icon Set.png"
@@ -79,7 +79,8 @@ def colour_icon(rgb):
     ys, xs = np.where(icon)
     rgba = np.dstack([sub.astype(np.uint8), (icon * 255).astype(np.uint8)])
     img = Image.fromarray(rgba, "RGBA").crop((xs.min(), ys.min(), xs.max() + 1, ys.max() + 1))
-    return shrink(square(img), 192)
+    # A 256-colour palette keeps it to ~14 KB instead of ~65 KB; Teams shows it small.
+    return shrink(square(img), 192).quantize(colors=256, method=Image.Quantize.FASTOCTREE)
 
 
 def outline_icon(rgb):
