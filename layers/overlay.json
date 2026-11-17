@@ -1,0 +1,8 @@
+{
+  "replace": {
+    "assets/welcome-dark.png": "assets/common/forge-logo-welcome.png",
+    "assets/welcome-light.png": "assets/common/forge-logo-welcome.png",
+    "teams/{componentId}_color.png": "assets/common/teams-color-192.png",
+    "teams/{componentId}_outline.png": "assets/common/teams-outline-32.png"
+  }
+}
