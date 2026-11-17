@@ -22,6 +22,13 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 SKIP_NAMES = {"package-lock.json"}
 
+# The assets layer: files kept once in layers/assets/ and used instead of the
+# images in the capture (which come from Microsoft's template).
+ASSETS = REPO / "layers" / "assets" / "common"
+WELCOME_IMAGE = ASSETS / "forge-logo-welcome.png"
+REPLACED_ASSETS = {"assets/welcome-dark.png", "assets/welcome-light.png"}
+TEAMS_ICONS = {"_color.png": ASSETS / "teams-color-192.png", "_outline.png": ASSETS / "teams-outline-32.png"}
+
 WP = "{__webpartPascal__}"
 WC = "{__webpartCamel__}"
 
@@ -120,11 +127,16 @@ def build(version: str):
         elif rel.startswith("src/webparts/template/"):
             tail = rel[len("src/webparts/template/"):]
             out = f"src/webparts/{WC}/" + tail.replace("Template", WP)
+            if tail in REPLACED_ASSETS:
+                raw, text = WELCOME_IMAGE.read_bytes(), None
             put(out, "webpart", webpart_text(text, web_part_id).encode() if text is not None else raw)
         elif rel.startswith("src/Types/"):
             put(rel.replace("Template", WP), "webpart",
                 webpart_text(text, web_part_id).encode() if text is not None else raw)
         elif rel.startswith("teams/") and web_part_id in rel:
+            for suffix, icon in TEAMS_ICONS.items():
+                if rel.endswith(suffix):
+                    raw = icon.read_bytes()
             put(rel.replace(web_part_id, "{__webpartId__}"), "webpart", raw)
         else:
             put(rel, "solution", solution_text(text).encode() if text is not None else raw)
