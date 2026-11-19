@@ -17,7 +17,8 @@ checked say so; things nobody has checked are listed at the end, not hidden.
 | `layers/overlay.json` | tells the release builder which Microsoft images to replace with that artwork | written for this repo |
 | `Manifest.v1.json`, `pack.v1.json` | JSON Schemas for generator manifests and packs | written for this repo |
 | `spfx-1.23.2-r1.pack.json` | a hand-written sample pack | written for this repo. It does not load: its `base/assets/icon.png` is a truncated placeholder. |
-| `tools/` | `make_generator.py`, `make_teams_icons.py`, `make_welcome_image.py` | written for this repo |
+| `tools/` | `make_generator.py`, `make_teams_icons.py`, `make_welcome_image.py`, and `publish_build.sh`, `publish_upload.sh`, `publish_verify.py` for publishing | written for this repo |
+| `.github/workflows/publish.yml` | a draft workflow that builds the archives and index and uploads them over SFTP, by hand only | written for this repo; never run on GitHub yet |
 | `CurrentVersions.md`, `DirectoryTress.ps1`, `PerposedTemplateStructure.json`, `tree.json` | working notes and helper files | written by the repo owner |
 | `generators/backend-api`, `fullstack`, `vite-react` | empty folders, planned generators | nothing yet |
 
@@ -109,6 +110,12 @@ Not checked, or open:
   per-file notices.
 - **Third-party packages** named in the `package-lock.json` files: each has its own licence, not reviewed here.
 - **How the artwork was made.**
+
+## Publishing
+
+`.github/workflows/publish.yml` builds the archives and `index.json` (official SPFx templates from the fork, plus the
+`yo`-derived generators) and, when asked, uploads them to the downloads server over SFTP. Setup, safety and what has been
+tested are in `docs/publishing.md` of the SDK repo. It has been run only on a developer machine, never on GitHub.
 
 ## Rebuilding
 

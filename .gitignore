@@ -1,0 +1,4 @@
+# build output of tools/publish_build.sh and Python caches
+out/
+__pycache__/
+*.pyc

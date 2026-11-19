@@ -1,0 +1,149 @@
+# Builds the SPFx template archives and index.json, and (only when asked) uploads them to the
+# downloads server over SFTP. See docs/publishing.md in the Forge.Scaffold.SDK repo for the one-time setup.
+#
+# DRAFT: written to be read and run by a person. The build and the checks were run on a developer
+# machine; the upload and the check of the live server have never run against a real server.
+name: Publish templates
+
+on:
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: "Upload to the downloads server. Leave off to build and check only."
+        type: boolean
+        default: false
+      include_yo_generators:
+        description: "Also release the yo-derived generators (SPFx 1.20.0 to 1.23.2)"
+        type: boolean
+        default: true
+      spfx_ref:
+        description: "Branch, tag or commit of the SPFx repo to release the official templates from"
+        type: string
+        default: main
+
+# Nothing in this workflow needs to write to a repo.
+permissions:
+  contents: read
+
+# Two publishes must never overlap, and a running one is never cancelled halfway.
+concurrency:
+  group: publish-templates
+  cancel-in-progress: false
+
+env:
+  # Repository variables (Settings > Secrets and variables > Actions > Variables).
+  BASE_URL: ${{ vars.TEMPLATES_BASE_URL }}          # https://downloads.mentenaz-server.com/forge-scaffold
+  SDK_REPOSITORY: ${{ vars.SDK_REPOSITORY || 'mentenaz/Forge.Scaffold.SDK' }}
+  SPFX_REPOSITORY: ${{ vars.SPFX_REPOSITORY || 'mentenaz/spfx' }}
+
+jobs:
+  # ------------------------------------------------------------------ build and check (no secrets)
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - name: Check the settings
+        run: |
+          case "$BASE_URL" in
+            https://*) ;;
+            *) echo "::error::Set the repository variable TEMPLATES_BASE_URL to the public https URL, e.g. https://downloads.mentenaz-server.com/forge-scaffold"; exit 1 ;;
+          esac
+
+      - name: Check out this repo (templates, overlay, scripts)
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          path: templates
+          persist-credentials: false
+
+      # A private repo needs a token that can read it: add the secret CHECKOUT_TOKEN
+      # (a fine-grained token with read access to contents of the two repos below).
+      - name: Check out the engine (Forge.Scaffold.SDK)
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: ${{ env.SDK_REPOSITORY }}
+          path: sdk
+          token: ${{ secrets.CHECKOUT_TOKEN || github.token }}
+          persist-credentials: false
+
+      - name: Check out the official SPFx templates
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: ${{ env.SPFX_REPOSITORY }}
+          ref: ${{ inputs.spfx_ref }}
+          path: spfx
+          token: ${{ secrets.CHECKOUT_TOKEN || github.token }}
+          persist-credentials: false
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@683b588c487a69d01f6c6ddf40f036ff682cc2c8 # v1
+        with:
+          toolchain: stable
+
+      - name: Cache the build of the engine
+        uses: Swatinem/rust-cache@d1527c8f67ef9af357290475d4af4b0fab8f12e0 # v2.9.3
+        with:
+          workspaces: sdk
+
+      - name: Build the release and check it
+        env:
+          SPFX_DIR: spfx
+          SDK_DIR: sdk
+          OUT_DIR: out
+          INCLUDE_YO: ${{ inputs.include_yo_generators && '1' || '0' }}
+        run: bash templates/tools/publish_build.sh
+
+      - name: Keep the release for review and for the upload job
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: templates-release
+          path: out/
+          if-no-files-found: error
+          retention-days: 14
+
+  # ---------------------------------------------------- upload (only when asked; the only job with secrets)
+  publish:
+    needs: build
+    if: ${{ inputs.publish }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    # Give this environment required reviewers (Settings > Environments > production) so that
+    # nothing is uploaded without a person approving it, and keep the secrets below on it.
+    environment: production
+    steps:
+      - name: Check out the scripts only
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          path: templates
+          sparse-checkout: tools
+          persist-credentials: false
+
+      - name: Get the release that was built and checked
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: templates-release
+          path: out
+
+      - name: Upload over SFTP, archives first and index.json last
+        env:
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+          SFTP_PORT: ${{ secrets.SFTP_PORT || '22' }}
+          SFTP_USER: ${{ secrets.SFTP_USER }}
+          SFTP_PATH: ${{ secrets.SFTP_PATH }}               # e.g. /var/www/downloads/forge-scaffold
+          SFTP_KEY: ${{ secrets.SFTP_KEY }}                 # private key of the deploy user
+          SFTP_KNOWN_HOSTS: ${{ secrets.SFTP_KNOWN_HOSTS }} # the server's host key line(s), pinned
+          OUT_DIR: out
+        run: |
+          set -euo pipefail
+          umask 077
+          key="$RUNNER_TEMP/deploy_key"
+          known="$RUNNER_TEMP/known_hosts"
+          trap 'rm -f "$key" "$known"' EXIT
+          printf '%s\n' "$SFTP_KEY" > "$key"
+          printf '%s\n' "$SFTP_KNOWN_HOSTS" > "$known"
+          SFTP_KEY_FILE="$key" SFTP_KNOWN_HOSTS_FILE="$known" bash templates/tools/publish_upload.sh
+
+      - name: Check what the server now serves
+        run: python3 templates/tools/publish_verify.py
+        env:
+          OUT_DIR: out
+          BASE_URL: ${{ vars.TEMPLATES_BASE_URL }}
