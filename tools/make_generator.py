@@ -181,6 +181,10 @@ def build(version: str):
         "post": [{"action": "install", "when": {"key": "install", "equals": True}}],
         "packageManagers": {"default": "npm", "tested": ["npm"]},
     }
+    # The Node the capture needs (engines.node of its package.json), so the host can check it before installing.
+    engines = json.loads((src / "package.json").read_text("utf-8")).get("engines", {}).get("node")
+    if engines:
+        manifest["requires"] = {"node": engines}
     (dst / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", "utf-8")
     print(f"{version}: wrote {dst}")
 

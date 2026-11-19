@@ -1,5 +1,5 @@
 # Builds the SPFx template archives and index.json, and (only when asked) uploads them to the
-# downloads server over SFTP. See docs/publishing.md in the Forge.Scaffold.SDK repo for the one-time setup.
+# downloads server over FTPS. See docs/publishing.md in the Forge.Scaffold.SDK repo for the one-time setup.
 #
 # DRAFT: written to be read and run by a person. The build job has run on GitHub with publish off. The
 # upload job and the check of the live server have never run against a real server.
@@ -123,24 +123,41 @@ jobs:
           name: templates-release
           path: out
 
-      - name: Upload over SFTP, archives first and index.json last
-        env:
-          SFTP_HOST: ${{ secrets.SFTP_HOST }}
-          SFTP_PORT: ${{ secrets.SFTP_PORT || '22' }}
-          SFTP_USER: ${{ secrets.SFTP_USER }}
-          SFTP_PATH: ${{ secrets.SFTP_PATH }}               # e.g. /var/www/downloads/forge-scaffold
-          SFTP_KEY: ${{ secrets.SFTP_KEY }}                 # private key of the deploy user
-          SFTP_KNOWN_HOSTS: ${{ secrets.SFTP_KNOWN_HOSTS }} # the server's host key line(s), pinned
-          OUT_DIR: out
-        run: |
-          set -euo pipefail
-          umask 077
-          key="$RUNNER_TEMP/deploy_key"
-          known="$RUNNER_TEMP/known_hosts"
-          trap 'rm -f "$key" "$known"' EXIT
-          printf '%s\n' "$SFTP_KEY" > "$key"
-          printf '%s\n' "$SFTP_KNOWN_HOSTS" > "$known"
-          SFTP_KEY_FILE="$key" SFTP_KNOWN_HOSTS_FILE="$known" bash templates/tools/publish_upload.sh
+      # The same way build_installers.yml in the Forge Super repo publishes the apt repository to this
+      # server: FTPS on port 21 (the host offers no SFTP), the account's own folder is the web root of
+      # downloads.mentenaz-server.com, so the templates go in /forge-scaffold/.
+      # Two steps so a client never sees an index that points at a file that is not there yet:
+      # the archives first, index.json last. Nothing on the server is deleted. The action keeps a
+      # small state file (named per step) in the folder to send only what changed.
+      - name: Upload the archives
+        uses: SamKirkland/FTP-Deploy-Action@8e83cea8672e3fbcbb9fdafff34debf6ae4c5f65 # v4.3.5
+        with:
+          server: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USER }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          protocol: ftps
+          port: 21
+          local-dir: out/
+          server-dir: /forge-scaffold/
+          state-name: .ftp-deploy-sync-state-archives.json
+          exclude: |
+            **/index.json
+          dangerous-clean-slate: false
+
+      - name: Upload index.json last
+        uses: SamKirkland/FTP-Deploy-Action@8e83cea8672e3fbcbb9fdafff34debf6ae4c5f65 # v4.3.5
+        with:
+          server: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USER }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          protocol: ftps
+          port: 21
+          local-dir: out/
+          server-dir: /forge-scaffold/
+          state-name: .ftp-deploy-sync-state-index.json
+          exclude: |
+            **/*.tar.gz
+          dangerous-clean-slate: false
 
       - name: Check what the server now serves
         run: python3 templates/tools/publish_verify.py
