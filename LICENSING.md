@@ -24,6 +24,15 @@ Files written for this repo, which belong to the repo owner:
 - **Branding.** The Mentenaz Forge logo and the icons in `layers/assets/common/` are not licensed for reuse by this
   file. (Change this line if you want them covered.)
 
+## Official SharePoint/spfx templates
+
+The release builder in the Forge.Scaffold.SDK repo can also build archives from the templates of
+[SharePoint/spfx](https://github.com/SharePoint/spfx). Those are Microsoft's, licensed MIT (its root `LICENSE`: "The projects
+in this monorepo are licensed under the MIT license", Copyright (c) Microsoft Corporation). Nothing of them is stored in this
+repo. Every archive built from them carries a `NOTICE.txt` with Microsoft's copyright and licence text, as the MIT licence
+requires, and says which images were replaced by the files in `layers/`. The contribution terms and individual file headers
+of that repo have not been read.
+
 ## Packages installed by the user
 
 Generated projects install `@microsoft/sp-*` and other packages from npm on the user's machine. None of them is
