@@ -1,8 +1,8 @@
 # Builds the SPFx template archives and index.json, and (only when asked) uploads them to the
 # downloads server over SFTP. See docs/publishing.md in the Forge.Scaffold.SDK repo for the one-time setup.
 #
-# DRAFT: written to be read and run by a person. The build and the checks were run on a developer
-# machine; the upload and the check of the live server have never run against a real server.
+# DRAFT: written to be read and run by a person. The build job has run on GitHub with publish off. The
+# upload job and the check of the live server have never run against a real server.
 name: Publish templates
 
 on:
