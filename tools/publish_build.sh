@@ -47,7 +47,10 @@ SDK_DIR="$(absolute "$SDK_DIR")"
 # ---- the previous index: it decides which archives keep their revision
 PREV_COPY=""
 if [ -n "$PREVIOUS_INDEX_URL" ]; then
-  code="$(curl -sS -L --retry 3 --retry-delay 2 -o "$OUT_DIR/index.json" -w '%{http_code}' "$PREVIOUS_INDEX_URL")"
+  # The host sometimes does not answer GitHub's runners, so fail each try fast (15 s to connect) and
+  # try again for a few minutes instead of hanging for ten.
+  code="$(curl -sS -L --connect-timeout 15 --max-time 60 --retry 6 --retry-delay 20 --retry-all-errors \
+    -o "$OUT_DIR/index.json" -w '%{http_code}' "$PREVIOUS_INDEX_URL")"
   case "$code" in
     200)
       PREV_COPY="$(mktemp)"

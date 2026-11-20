@@ -129,7 +129,18 @@ jobs:
       # Two steps so a client never sees an index that points at a file that is not there yet:
       # the archives first, index.json last. Nothing on the server is deleted. The action keeps a
       # small state file (named per step) in the folder to send only what changed.
+      # The same way build_installers.yml in the Forge Super repo publishes the apt repository to this
+      # server: FTPS on port 21 (the host offers no SFTP), the account's own folder is the web root of
+      # downloads.mentenaz-server.com, so the templates go in /forge-scaffold/.
+      # Two uploads so a client never sees an index that points at a file that is not there yet:
+      # the archives first, index.json last. Nothing on the server is deleted. The action keeps a
+      # small state file (named per upload) in the folder to send only what changed.
+      # The host sometimes does not answer GitHub's runners (a connection timeout), so each upload
+      # gets up to three tries; a retry only runs when the try before it failed, and resumes from
+      # what the server already has. The index is only uploaded after the archives succeeded.
       - name: Upload the archives
+        id: archives1
+        continue-on-error: true
         uses: SamKirkland/FTP-Deploy-Action@8e83cea8672e3fbcbb9fdafff34debf6ae4c5f65 # v4.3.5
         with:
           server: ${{ secrets.SFTP_HOST }}
@@ -137,6 +148,44 @@ jobs:
           password: ${{ secrets.SFTP_PASSWORD }}
           protocol: ftps
           port: 21
+          timeout: 120000
+          local-dir: out/
+          server-dir: /forge-scaffold/
+          state-name: .ftp-deploy-sync-state-archives.json
+          exclude: |
+            **/index.json
+          dangerous-clean-slate: false
+
+      - name: Upload the archives (second try)
+        id: archives2
+        if: ${{ steps.archives1.outcome == 'failure' }}
+        continue-on-error: true
+        uses: SamKirkland/FTP-Deploy-Action@8e83cea8672e3fbcbb9fdafff34debf6ae4c5f65 # v4.3.5
+        with:
+          server: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USER }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          protocol: ftps
+          port: 21
+          timeout: 120000
+          local-dir: out/
+          server-dir: /forge-scaffold/
+          state-name: .ftp-deploy-sync-state-archives.json
+          exclude: |
+            **/index.json
+          dangerous-clean-slate: false
+
+      - name: Upload the archives (third try)
+        id: archives3
+        if: ${{ steps.archives1.outcome == 'failure' && steps.archives2.outcome == 'failure' }}
+        uses: SamKirkland/FTP-Deploy-Action@8e83cea8672e3fbcbb9fdafff34debf6ae4c5f65 # v4.3.5
+        with:
+          server: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USER }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          protocol: ftps
+          port: 21
+          timeout: 120000
           local-dir: out/
           server-dir: /forge-scaffold/
           state-name: .ftp-deploy-sync-state-archives.json
@@ -145,6 +194,8 @@ jobs:
           dangerous-clean-slate: false
 
       - name: Upload index.json last
+        id: index1
+        continue-on-error: true
         uses: SamKirkland/FTP-Deploy-Action@8e83cea8672e3fbcbb9fdafff34debf6ae4c5f65 # v4.3.5
         with:
           server: ${{ secrets.SFTP_HOST }}
@@ -152,6 +203,44 @@ jobs:
           password: ${{ secrets.SFTP_PASSWORD }}
           protocol: ftps
           port: 21
+          timeout: 120000
+          local-dir: out/
+          server-dir: /forge-scaffold/
+          state-name: .ftp-deploy-sync-state-index.json
+          exclude: |
+            **/*.tar.gz
+          dangerous-clean-slate: false
+
+      - name: Upload index.json last (second try)
+        id: index2
+        if: ${{ steps.index1.outcome == 'failure' }}
+        continue-on-error: true
+        uses: SamKirkland/FTP-Deploy-Action@8e83cea8672e3fbcbb9fdafff34debf6ae4c5f65 # v4.3.5
+        with:
+          server: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USER }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          protocol: ftps
+          port: 21
+          timeout: 120000
+          local-dir: out/
+          server-dir: /forge-scaffold/
+          state-name: .ftp-deploy-sync-state-index.json
+          exclude: |
+            **/*.tar.gz
+          dangerous-clean-slate: false
+
+      - name: Upload index.json last (third try)
+        id: index3
+        if: ${{ steps.index1.outcome == 'failure' && steps.index2.outcome == 'failure' }}
+        uses: SamKirkland/FTP-Deploy-Action@8e83cea8672e3fbcbb9fdafff34debf6ae4c5f65 # v4.3.5
+        with:
+          server: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USER }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          protocol: ftps
+          port: 21
+          timeout: 120000
           local-dir: out/
           server-dir: /forge-scaffold/
           state-name: .ftp-deploy-sync-state-index.json
