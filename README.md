@@ -18,7 +18,7 @@ checked say so; things nobody has checked are listed at the end, not hidden.
 | `Manifest.v1.json`, `pack.v1.json` | JSON Schemas for generator manifests and packs | written for this repo |
 | `spfx-1.23.2-r1.pack.json` | a hand-written sample pack | written for this repo. It does not load: its `base/assets/icon.png` is a truncated placeholder. |
 | `tools/` | `make_generator.py`, `make_teams_icons.py`, `make_welcome_image.py`, and `publish_build.sh`, `publish_verify.py` for publishing | written for this repo |
-| `.github/workflows/publish.yml` | a workflow that builds the archives and index and uploads them over FTPS, by hand only | written for this repo; it has built and published once (20 November 2026), after one re-run for a connection timeout |
+| `.github/workflows/publish.yml` | a workflow that builds the archives and index and uploads them over FTPS, by hand only | written for this repo; it has published twice (20 November 2026); the second run changed nothing and uploaded nothing. The host sometimes does not answer the runner, so builds and uploads retry |
 | `CurrentVersions.md`, `DirectoryTress.ps1`, `PerposedTemplateStructure.json`, `tree.json` | working notes and helper files | written by the repo owner |
 | `generators/backend-api`, `fullstack`, `vite-react` | empty folders, planned generators | nothing yet |
 
