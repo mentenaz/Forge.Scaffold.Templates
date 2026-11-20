@@ -12,6 +12,13 @@ on:
         description: "Upload to the downloads server. Leave off to build and check only."
         type: boolean
         default: false
+      transport:
+        description: "How to upload: ssh (tar over ssh, port 24) or ftps (the fallback)"
+        type: choice
+        options:
+          - ssh
+          - ftps
+        default: ssh
       include_yo_generators:
         description: "Also release the yo-derived generators (SPFx 1.20.0 to 1.23.2)"
         type: boolean
@@ -123,7 +130,33 @@ jobs:
           name: templates-release
           path: out
 
-      # The same way build_installers.yml in the Forge Super repo publishes the apt repository to this
+      # ssh: the files travel as one tar stream into a staging folder and are renamed into place, archives
+      # first and index.json last (tools/publish_upload_ssh.sh). The server only accepts the
+      # hmac-sha2-256 MAC, and its host key is pinned below (SHA256:sidusN7ytwdejwMac77aKk9aYwajP0mgqmaAos9E+ZQ);
+      # only the private key is secret. See ssh_check.yml for a login check that changes nothing.
+      - name: Upload over ssh (archives first, index.json last)
+        if: ${{ inputs.transport == 'ssh' }}
+        env:
+          SSH_KEY: ${{ secrets.SSH_KEY }}
+          SSH_HOST: downloads.mentenaz-server.com
+          SSH_PORT: "24"
+          SSH_USER: mentefpu
+          SSH_PATH: /home/mentefpu/downloads.mentenaz-server.com/forge-scaffold
+          SSH_MACS: hmac-sha2-256
+          OUT_DIR: out
+        run: |
+          set -euo pipefail
+          umask 077
+          [ -n "$SSH_KEY" ] || { echo "::error::The SSH_KEY secret is not set."; exit 1; }
+          key="$RUNNER_TEMP/deploy_key"
+          known="$RUNNER_TEMP/known_hosts"
+          trap 'rm -f "$key" "$known"' EXIT
+          # A key saved on Windows can carry CRLF line endings, which ssh rejects.
+          printf '%s\n' "$SSH_KEY" | tr -d '\r' > "$key"
+          echo '[downloads.mentenaz-server.com]:24 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEaP/0qV5NeAJcIVmPpQKJhRRa8QRoUcS+V2cBvx4I6g' > "$known"
+          SSH_KEY_FILE="$key" SSH_KNOWN_HOSTS_FILE="$known" bash templates/tools/publish_upload_ssh.sh
+
+      # ftps (the fallback), the same way build_installers.yml in the Forge Super repo publishes the apt repository to this
       # server: FTPS on port 21 (the host offers no SFTP), the account's own folder is the web root of
       # downloads.mentenaz-server.com. The forgetemplates account is limited to the forge-scaffold
       # folder, so its root (/) is that folder, served at .../forge-scaffold.
@@ -135,6 +168,7 @@ jobs:
       # what the server already has. The index is only uploaded after the archives succeeded.
       - name: Upload the archives
         id: archives1
+        if: ${{ inputs.transport == 'ftps' }}
         continue-on-error: true
         uses: SamKirkland/FTP-Deploy-Action@8e83cea8672e3fbcbb9fdafff34debf6ae4c5f65 # v4.3.5
         with:
@@ -190,6 +224,7 @@ jobs:
 
       - name: Upload index.json last
         id: index1
+        if: ${{ inputs.transport == 'ftps' }}
         continue-on-error: true
         uses: SamKirkland/FTP-Deploy-Action@8e83cea8672e3fbcbb9fdafff34debf6ae4c5f65 # v4.3.5
         with:
