@@ -125,13 +125,8 @@ jobs:
 
       # The same way build_installers.yml in the Forge Super repo publishes the apt repository to this
       # server: FTPS on port 21 (the host offers no SFTP), the account's own folder is the web root of
-      # downloads.mentenaz-server.com, so the templates go in /forge-scaffold/.
-      # Two steps so a client never sees an index that points at a file that is not there yet:
-      # the archives first, index.json last. Nothing on the server is deleted. The action keeps a
-      # small state file (named per step) in the folder to send only what changed.
-      # The same way build_installers.yml in the Forge Super repo publishes the apt repository to this
-      # server: FTPS on port 21 (the host offers no SFTP), the account's own folder is the web root of
-      # downloads.mentenaz-server.com, so the templates go in /forge-scaffold/.
+      # downloads.mentenaz-server.com. The forgetemplates account is limited to the forge-scaffold
+      # folder, so its root (/) is that folder, served at .../forge-scaffold.
       # Two uploads so a client never sees an index that points at a file that is not there yet:
       # the archives first, index.json last. Nothing on the server is deleted. The action keeps a
       # small state file (named per upload) in the folder to send only what changed.
@@ -150,7 +145,7 @@ jobs:
           port: 21
           timeout: 120000
           local-dir: out/
-          server-dir: /forge-scaffold/
+          server-dir: /
           state-name: .ftp-deploy-sync-state-archives.json
           exclude: |
             **/index.json
@@ -169,7 +164,7 @@ jobs:
           port: 21
           timeout: 120000
           local-dir: out/
-          server-dir: /forge-scaffold/
+          server-dir: /
           state-name: .ftp-deploy-sync-state-archives.json
           exclude: |
             **/index.json
@@ -187,7 +182,7 @@ jobs:
           port: 21
           timeout: 120000
           local-dir: out/
-          server-dir: /forge-scaffold/
+          server-dir: /
           state-name: .ftp-deploy-sync-state-archives.json
           exclude: |
             **/index.json
@@ -205,7 +200,7 @@ jobs:
           port: 21
           timeout: 120000
           local-dir: out/
-          server-dir: /forge-scaffold/
+          server-dir: /
           state-name: .ftp-deploy-sync-state-index.json
           exclude: |
             **/*.tar.gz
@@ -224,7 +219,7 @@ jobs:
           port: 21
           timeout: 120000
           local-dir: out/
-          server-dir: /forge-scaffold/
+          server-dir: /
           state-name: .ftp-deploy-sync-state-index.json
           exclude: |
             **/*.tar.gz
@@ -242,7 +237,7 @@ jobs:
           port: 21
           timeout: 120000
           local-dir: out/
-          server-dir: /forge-scaffold/
+          server-dir: /
           state-name: .ftp-deploy-sync-state-index.json
           exclude: |
             **/*.tar.gz
