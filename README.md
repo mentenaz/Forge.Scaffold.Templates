@@ -13,8 +13,9 @@ checked say so; things nobody has checked are listed at the end, not hidden.
 |---|---|---|
 | `generators/spfx-webpart/<version>/` | raw output of `yo @microsoft/generator-sharepoint` for SPFx 1.20.0, 1.21.1, 1.22.2, 1.23.0, 1.23.2 | Microsoft's generator, run by the repo owner. See [the captures](#the-yo-captures). |
 | `templates/spfxv.<version>/` | the captures turned into generator folders (`manifest.json`, `solution/`, `webpart/`) | made from the captures by `tools/make_generator.py`. See [the generator folders](#the-generator-folders). |
-| `layers/assets/common/` | the Forge logo, a resized welcome image, the two Teams icons | the repo owner's artwork. See [the artwork](#the-artwork). |
-| `layers/overlay.json` | tells the release builder which Microsoft images to replace with that artwork | written for this repo |
+| `layers/assets/common/` | the Forge logo, a resized welcome image, the two Teams icons, and a vector mark for favicons | the repo owner's artwork. See [the artwork](#the-artwork). |
+| `layers/vite/react-ts/` | the Forge demo page (`App.tsx`, `App.css`) and README that replace the Vite ones in the `vite-react-ts` template | written for this repo |
+| `layers/overlay.json` | tells the release builder which images of the SPFx and Vite templates to replace with that artwork | written for this repo |
 | `Manifest.v1.json`, `pack.v1.json` | JSON Schemas for generator manifests and packs | written for this repo |
 | `spfx-1.23.2-r1.pack.json` | a hand-written sample pack | written for this repo. It does not load: its `base/assets/icon.png` is a truncated placeholder. |
 | `tools/` | `make_generator.py`, `make_teams_icons.py`, `make_welcome_image.py`, and `publish_build.sh`, `publish_verify.py` for publishing | written for this repo |
@@ -88,8 +89,20 @@ The code, configuration and structure around those images still derive from the 
   (`tools/make_welcome_image.py`).
 - `teams-color-192.png`, `teams-outline-32.png`: cut out of the owner's icon sheet `Mentenaz Forge Icon Set.png`, which has a
   checkerboard painted into the picture, so the cut-out is done by the script (`tools/make_teams_icons.py`).
+- `forge-mark.svg`: the vector `assets/images/mentenaz_forge_super.svg` of the Forge Super repo (one black path, 1254 x 1254)
+  with a `<style>` added so the mark is dark on a light browser and light on a dark one. It replaces the Vite template's
+  `public/favicon.svg`, and `forge-logo-welcome.png` replaces its `src/assets/hero.png`.
 
-They are not licensed for reuse by this repo (see `LICENSING.md`). How the original artwork was created is not recorded here.
+`layers/vite/react-ts/` holds the text files that replace the demo page and the README of the Vite React template (they were
+written for this repo, and use the project name as a token). The overlay also leaves out the template's `vite.svg`, `react.svg`
+and `icons.svg`, so a project made from it has no Vite or React logo and no links to Vite's social channels. It does still say
+once, in its README, that it is built with Vite, and it keeps the `vite` dependency and `vite.config.ts` because that is what builds it.
+
+The images are not licensed for reuse by this repo (see `LICENSING.md`). According to the repo owner the artwork is custom: made
+with Microsoft Copilot and then modified with ChatGPT. Whether and how such images can be protected or licensed depends on the
+tools' terms and on the law where you are, and this repo does not decide that. Projects made from the Vite templates contain
+copies of two of these images (the favicon and the hero image); whoever makes such a project may keep, change or remove them
+(see `LICENSING.md`, and the Forge Super repository's `BRANDING.md` for the artwork in general).
 
 ## Checked, and not checked
 

@@ -3,6 +3,16 @@
     "assets/welcome-dark.png": "assets/common/forge-logo-welcome.png",
     "assets/welcome-light.png": "assets/common/forge-logo-welcome.png",
     "teams/{componentId}_color.png": "assets/common/teams-color-192.png",
-    "teams/{componentId}_outline.png": "assets/common/teams-outline-32.png"
-  }
+    "teams/{componentId}_outline.png": "assets/common/teams-outline-32.png",
+    "public/favicon.svg": "assets/common/forge-mark.svg",
+    "src/assets/hero.png": "assets/common/forge-logo-welcome.png",
+    "react-ts:src/App.tsx": "vite/react-ts/App.tsx",
+    "react-ts:src/App.css": "vite/react-ts/App.css",
+    "react-ts:README.md": "vite/react-ts/README.md"
+  },
+  "remove": [
+    "react-ts:src/assets/vite.svg",
+    "react-ts:src/assets/react.svg",
+    "react-ts:public/icons.svg"
+  ]
 }

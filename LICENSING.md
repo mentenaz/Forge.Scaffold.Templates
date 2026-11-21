@@ -21,8 +21,14 @@ Files written for this repo, which belong to the repo owner:
   [SharePoint/sp-dev-docs discussion 11052](https://github.com/SharePoint/sp-dev-docs/discussions/11052).
   The repo owner has chosen to publish these folders while that question is open, so treat them as having no licence grant from this repo. The welcome images and Teams icons are no longer Microsoft's
   (they were replaced), but the code and configuration around them still derive from the generator output.
-- **Branding.** The Mentenaz Forge logo and the icons in `layers/assets/common/` are not licensed for reuse by this
-  file. (Change this line if you want them covered.)
+- **Branding.** The Mentenaz Forge name, logo and the artwork in `layers/assets/common/` are brand assets, not offered under
+  `MIT OR Apache-2.0`. They are the same artwork as in the Forge Super repository, whose
+  [`BRANDING.md`](https://github.com/mentenaz/mentenaz.Forge.Super/blob/main/BRANDING.md) says what may be done with it.
+  The text files in `layers/vite/` were written for this repo and are covered by the licence above.
+  **Projects made from these templates:** the Forge favicon and the Forge image that some of the templates put in a project
+  (for example the Vite React template's `public/favicon.svg` and `src/assets/hero.png`) may be kept, changed or removed by
+  whoever makes the project; the project is theirs. That is a permission for those copies in that project, not a licence for
+  the artwork in general: the name and logo may not be used to suggest that something else is Mentenaz Forge or endorsed by it.
 
 ## Official SharePoint/spfx templates
 
