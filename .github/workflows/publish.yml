@@ -131,7 +131,8 @@ jobs:
           path: out
 
       # ssh: the files travel as one tar stream into a staging folder and are renamed into place, archives
-      # first and index.json last (tools/publish_upload_ssh.sh). The server only accepts the
+      # first and index.json last (tools/publish_upload_ssh.sh, which calls ~/bin/forge-templates-receive on the
+      # server: tools/server/forge-templates-receive.sh, the only thing the key may run). The server only accepts the
       # hmac-sha2-256 MAC, and its host key is pinned below (SHA256:sidusN7ytwdejwMac77aKk9aYwajP0mgqmaAos9E+ZQ);
       # only the private key is secret. See ssh_check.yml for a login check that changes nothing.
       - name: Upload over ssh (archives first, index.json last)
@@ -141,7 +142,6 @@ jobs:
           SSH_HOST: downloads.mentenaz-server.com
           SSH_PORT: "24"
           SSH_USER: mentefpu
-          SSH_PATH: /home/mentefpu/downloads.mentenaz-server.com/forge-scaffold
           SSH_MACS: hmac-sha2-256
           OUT_DIR: out
         run: |

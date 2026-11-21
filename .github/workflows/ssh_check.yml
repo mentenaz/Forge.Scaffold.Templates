@@ -1,7 +1,8 @@
 # Checks that GitHub's build machines can log in to the downloads server over SSH with the templates
-# deploy key, and that the folder can be written, before the upload is moved off FTPS.
-# Run by hand from the Actions tab. It changes nothing that stays: it makes a folder, writes one file
-# in it and removes it again. It also lists the templates folder (read only).
+# deploy key and that the folder can be written. It runs `bin/forge-templates-receive check` on the
+# server (tools/server/forge-templates-receive.sh, which has to be installed there first): that lists the
+# templates folder and writes, renames and removes one probe file. Nothing stays. Run it by hand from the
+# Actions tab; it works the same before and after the key is tied to that script in authorized_keys.
 #
 # The server only accepts the hmac-sha2-256 MAC, so every ssh call passes it. The host key below is the
 # server's public ed25519 key (SHA256:sidusN7ytwdejwMac77aKk9aYwajP0mgqmaAos9E+ZQ); the build machine
@@ -22,7 +23,6 @@ jobs:
       SSH_HOST: downloads.mentenaz-server.com
       SSH_PORT: "24"
       SSH_USER: mentefpu
-      SSH_PATH: /home/mentefpu/downloads.mentenaz-server.com/forge-scaffold
     steps:
       - name: Install the deploy key and the pinned host key
         env:
@@ -38,10 +38,10 @@ jobs:
           chmod 600 ~/.ssh/deploy
           echo '[downloads.mentenaz-server.com]:24 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEaP/0qV5NeAJcIVmPpQKJhRRa8QRoUcS+V2cBvx4I6g' > ~/.ssh/known_hosts
 
-      - name: Log in, look at the templates folder, and check it can be written
+      - name: Log in and run the check on the server
         run: |
           ssh -i ~/.ssh/deploy -p "$SSH_PORT" \
             -o MACs=hmac-sha2-256 -o StrictHostKeyChecking=yes \
             -o BatchMode=yes -o ConnectTimeout=20 \
             "$SSH_USER@$SSH_HOST" \
-            "set -e; cd $SSH_PATH && pwd && ls -l | head -n 40 && which tar && mkdir .incoming-check && echo ok > .incoming-check/probe && mv -f .incoming-check/probe .incoming-check/probe2 && rm -r .incoming-check && echo 'write, rename and remove all work'"
+            "bin/forge-templates-receive check"
