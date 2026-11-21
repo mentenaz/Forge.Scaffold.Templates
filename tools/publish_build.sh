@@ -11,6 +11,10 @@
 #   SDK_DIR             the Forge.Scaffold.SDK checkout (default: ../Forge.Scaffold.SDK next to this repo).
 #   OUT_DIR             where to build (default: ./out). Must be empty or not exist.
 #   INCLUDE_YO          1 (default) also releases the yo-derived generator folders (templates/spfxv.*).
+#   VITE_DIR            optional. A checkout of the Vite repo (or the fork): packages/create-vite is released as
+#                       the generators vite-<template>. Empty (default) releases no Vite templates.
+#   VITE_TEMPLATES      which create-vite templates to release, separated by spaces or commas (default react-ts,
+#                       the one that has been installed and built). Only used with VITE_DIR.
 #   PREVIOUS_INDEX_URL  the index published last time, so unchanged archives keep their revision.
 #                       Default BASE_URL/index.json. A 404 means "first publish". Set to empty to skip.
 #   PYTHON              default python3.
@@ -43,6 +47,13 @@ OUT_DIR="$(absolute "$OUT_DIR")"
 [ -z "$(ls -A "$OUT_DIR")" ] || fail "$OUT_DIR is not empty; build into a fresh folder"
 SPFX_DIR="$(absolute "$SPFX_DIR")"
 SDK_DIR="$(absolute "$SDK_DIR")"
+VITE_DIR="${VITE_DIR:-}"
+VITE_TEMPLATES="${VITE_TEMPLATES:-react-ts}"
+if [ -n "$VITE_DIR" ]; then
+  [ -f "$VITE_DIR/packages/create-vite/package.json" ] || fail "$VITE_DIR/packages/create-vite/package.json is missing: is VITE_DIR a checkout of the Vite repo?"
+  [ -f "$VITE_DIR/packages/create-vite/LICENSE" ] || fail "$VITE_DIR/packages/create-vite/LICENSE is missing; the MIT notice has to travel with the templates"
+  VITE_DIR="$(absolute "$VITE_DIR")"
+fi
 
 # ---- the previous index: it decides which archives keep their revision
 PREV_COPY=""
@@ -78,6 +89,18 @@ for dir in "$SPFX_DIR"/templates/*/; do
 done
 [ "$count" -gt 0 ] || fail "no templates (folders with a template.json) found in $SPFX_DIR/templates"
 echo "official templates: $count"
+
+if [ -n "$VITE_DIR" ]; then
+  vite=0
+  for t in ${VITE_TEMPLATES//,/ }; do
+    [[ "$t" =~ ^[a-z0-9-]+$ ]] || fail "odd create-vite template name: $t"
+    [ -d "$VITE_DIR/packages/create-vite/template-$t" ] || fail "no create-vite template named $t in $VITE_DIR/packages/create-vite"
+    args+=(--create-vite "$(native "$VITE_DIR")" "$t")
+    vite=$((vite + 1))
+  done
+  [ "$vite" -gt 0 ] || fail "VITE_DIR is set but VITE_TEMPLATES names no template"
+  echo "create-vite templates: $vite"
+fi
 
 if [ "$INCLUDE_YO" = "1" ]; then
   yo=0
@@ -157,6 +180,13 @@ for e in entries:
                 problems.append(f"{fname}: an official template without NOTICE.txt")
             elif b"Copyright (c) Microsoft Corporation" not in t.extractfile(member).read():
                 problems.append(f"{fname}: NOTICE.txt has no Microsoft copyright line")
+        # the same for a create-vite template: its MIT notice travels with it
+        if e["generator"].startswith("vite-"):
+            member = f"{e['dir']}/NOTICE.txt"
+            if member not in names:
+                problems.append(f"{fname}: a create-vite template without NOTICE.txt")
+            elif b"VoidZero Inc. and Vite contributors" not in t.extractfile(member).read():
+                problems.append(f"{fname}: NOTICE.txt has no Vite copyright line")
 
     old = previous.get((e["generator"], e["version"]))
     state = "new" if old is None else ("unchanged" if old["sha256"] == e["sha256"] else "CHANGED")

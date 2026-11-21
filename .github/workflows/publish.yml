@@ -1,8 +1,6 @@
-# Builds the SPFx template archives and index.json, and (only when asked) uploads them to the
-# downloads server over FTPS. See docs/publishing.md in the Forge.Scaffold.SDK repo for the one-time setup.
-#
-# DRAFT: written to be read and run by a person. The build job has run on GitHub with publish off. The
-# upload job and the check of the live server have never run against a real server.
+# Builds the template archives (official SPFx, yo-derived SPFx, and create-vite templates) and index.json,
+# and (only when asked) uploads them to the downloads server over ssh (or FTPS). See docs/publishing.md in the
+# Forge.Scaffold.SDK repo for the one-time setup. Run by hand from the Actions tab.
 name: Publish templates
 
 on:
@@ -27,6 +25,14 @@ on:
         description: "Branch, tag or commit of the SPFx repo to release the official templates from"
         type: string
         default: main
+      vite_templates:
+        description: "create-vite templates to release as vite-<name>, separated by spaces (react-ts is the one that has been installed and built). Empty releases none."
+        type: string
+        default: react-ts
+      vite_ref:
+        description: "Branch, tag or commit of the Vite repo to release the create-vite templates from"
+        type: string
+        default: main
 
 # Nothing in this workflow needs to write to a repo.
 permissions:
@@ -42,6 +48,7 @@ env:
   BASE_URL: ${{ vars.TEMPLATES_BASE_URL }}          # https://downloads.mentenaz-server.com/forge-scaffold
   SDK_REPOSITORY: ${{ vars.SDK_REPOSITORY || 'mentenaz/Forge.Scaffold.SDK' }}
   SPFX_REPOSITORY: ${{ vars.SPFX_REPOSITORY || 'mentenaz/spfx' }}
+  VITE_REPOSITORY: ${{ vars.VITE_REPOSITORY || 'mentenaz/vite' }}
 
 jobs:
   # ------------------------------------------------------------------ build and check (no secrets)
@@ -81,6 +88,18 @@ jobs:
           token: ${{ secrets.CHECKOUT_TOKEN || github.token }}
           persist-credentials: false
 
+      # Only the create-vite folder is needed, not the whole Vite monorepo.
+      - name: Check out the create-vite templates
+        if: ${{ inputs.vite_templates != '' }}
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: ${{ env.VITE_REPOSITORY }}
+          ref: ${{ inputs.vite_ref }}
+          path: vite
+          sparse-checkout: packages/create-vite
+          token: ${{ secrets.CHECKOUT_TOKEN || github.token }}
+          persist-credentials: false
+
       - name: Install Rust
         uses: dtolnay/rust-toolchain@683b588c487a69d01f6c6ddf40f036ff682cc2c8 # v1
         with:
@@ -97,6 +116,8 @@ jobs:
           SDK_DIR: sdk
           OUT_DIR: out
           INCLUDE_YO: ${{ inputs.include_yo_generators && '1' || '0' }}
+          VITE_DIR: ${{ inputs.vite_templates != '' && 'vite' || '' }}
+          VITE_TEMPLATES: ${{ inputs.vite_templates }}
         run: bash templates/tools/publish_build.sh
 
       - name: Keep the release for review and for the upload job
