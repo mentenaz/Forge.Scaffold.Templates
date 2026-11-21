@@ -17,11 +17,11 @@ checked say so; things nobody has checked are listed at the end, not hidden.
 | `layers/vite/react-ts/` | the Forge demo page (`App.tsx`, `App.css`) and README that replace the Vite ones in the `vite-react-ts` template | written for this repo |
 | `layers/overlay.json` | tells the release builder which images of the SPFx and Vite templates to replace with that artwork | written for this repo |
 | `Manifest.v1.json`, `pack.v1.json` | JSON Schemas for generator manifests and packs | written for this repo |
-| `spfx-1.23.2-r1.pack.json` | a hand-written sample pack | written for this repo. It does not load: its `base/assets/icon.png` is a truncated placeholder. |
+| `spfx-webpart-1.23.2-r1.pack.json` | a sample pack: `templates/spfxv.1.23.2` packed with `cargo run --example pack` (it loads) | made from the `yo`-derived generator, so it carries the same open provenance question as that |
 | `tools/` | `make_generator.py`, `make_teams_icons.py`, `make_welcome_image.py`, and `publish_build.sh`, `publish_verify.py` for publishing | written for this repo |
 | `.github/workflows/publish.yml` | a workflow that builds the archives and index and uploads them over FTPS, by hand only | written for this repo; it has published twice (20 November 2026); the second run changed nothing and uploaded nothing. The host sometimes does not answer the runner, so builds and uploads retry |
 | `CurrentVersions.md`, `DirectoryTress.ps1`, `PerposedTemplateStructure.json`, `tree.json` | working notes and helper files | written by the repo owner |
-| `generators/backend-api`, `fullstack`, `vite-react` | empty folders, planned generators | nothing yet |
+| `generators/backend-api`, `fullstack` | empty folders (git does not keep them), planned generators | nothing yet |
 
 **The official SPFx templates are not stored here.** The SDK's release builder reads them from a checkout of
 [SharePoint/spfx](https://github.com/SharePoint/spfx) and puts a `NOTICE.txt` with Microsoft's MIT notice in every archive. The

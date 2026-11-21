@@ -13,8 +13,8 @@
 #   INCLUDE_YO          1 (default) also releases the yo-derived generator folders (templates/spfxv.*).
 #   VITE_DIR            optional. A checkout of the Vite repo (or the fork): packages/create-vite is released as
 #                       the generators vite-<template>. Empty (default) releases no Vite templates.
-#   VITE_TEMPLATES      which create-vite templates to release, separated by spaces or commas (default react-ts,
-#                       the one that has been installed and built). Only used with VITE_DIR.
+#   VITE_TEMPLATES      which create-vite templates to release, separated by spaces or commas (default: all but qwik and
+#                       qwik-ts, which do not npm install). Only used with VITE_DIR.
 #   PREVIOUS_INDEX_URL  the index published last time, so unchanged archives keep their revision.
 #                       Default BASE_URL/index.json. A 404 means "first publish". Set to empty to skip.
 #   PYTHON              default python3.
@@ -48,7 +48,7 @@ OUT_DIR="$(absolute "$OUT_DIR")"
 SPFX_DIR="$(absolute "$SPFX_DIR")"
 SDK_DIR="$(absolute "$SDK_DIR")"
 VITE_DIR="${VITE_DIR:-}"
-VITE_TEMPLATES="${VITE_TEMPLATES:-react-ts}"
+VITE_TEMPLATES="${VITE_TEMPLATES:-react-ts vue-ts vanilla-ts svelte-ts solid-ts preact-ts lit-ts react vue vanilla preact lit solid svelte}"
 if [ -n "$VITE_DIR" ]; then
   [ -f "$VITE_DIR/packages/create-vite/package.json" ] || fail "$VITE_DIR/packages/create-vite/package.json is missing: is VITE_DIR a checkout of the Vite repo?"
   [ -f "$VITE_DIR/packages/create-vite/LICENSE" ] || fail "$VITE_DIR/packages/create-vite/LICENSE is missing; the MIT notice has to travel with the templates"

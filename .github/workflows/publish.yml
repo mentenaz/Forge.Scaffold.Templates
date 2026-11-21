@@ -26,9 +26,9 @@ on:
         type: string
         default: main
       vite_templates:
-        description: "create-vite templates to release as vite-<name>, separated by spaces (react-ts is the one that has been installed and built). Empty releases none."
+        description: "create-vite templates to release as vite-<name>, separated by spaces (the default is every one that installs and builds: all but qwik and qwik-ts, whose create-vite templates do not npm install). A template left out of this list is left out of the index. Empty releases none."
         type: string
-        default: react-ts
+        default: "react-ts vue-ts vanilla-ts svelte-ts solid-ts preact-ts lit-ts react vue vanilla preact lit solid svelte"
       vite_ref:
         description: "Branch, tag or commit of the Vite repo to release the create-vite templates from"
         type: string
