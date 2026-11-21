@@ -8,11 +8,20 @@
     "src/assets/hero.png": "assets/common/forge-logo-welcome.png",
     "react-ts:src/App.tsx": "vite/react-ts/App.tsx",
     "react-ts:src/App.css": "vite/react-ts/App.css",
-    "react-ts:README.md": "vite/react-ts/README.md"
+    "react-ts:README.md": "vite/react-ts/README.md",
+    "vue-ts:src/components/HelloWorld.vue": "vite/vue-ts/HelloWorld.vue",
+    "vue-ts:README.md": "vite/vue-ts/README.md",
+    "vanilla-ts:src/main.ts": "vite/vanilla-ts/main.ts"
   },
   "remove": [
     "react-ts:src/assets/vite.svg",
     "react-ts:src/assets/react.svg",
-    "react-ts:public/icons.svg"
+    "react-ts:public/icons.svg",
+    "vue-ts:src/assets/vite.svg",
+    "vue-ts:src/assets/vue.svg",
+    "vue-ts:public/icons.svg",
+    "vanilla-ts:src/assets/vite.svg",
+    "vanilla-ts:src/assets/typescript.svg",
+    "vanilla-ts:public/icons.svg"
   ]
 }
