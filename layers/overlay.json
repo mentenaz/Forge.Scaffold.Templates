@@ -11,7 +11,16 @@
     "react-ts:README.md": "vite/react-ts/README.md",
     "vue-ts:src/components/HelloWorld.vue": "vite/vue-ts/HelloWorld.vue",
     "vue-ts:README.md": "vite/vue-ts/README.md",
-    "vanilla-ts:src/main.ts": "vite/vanilla-ts/main.ts"
+    "vanilla-ts:src/main.ts": "vite/vanilla-ts/main.ts",
+    "svelte-ts:src/App.svelte": "vite/svelte-ts/App.svelte",
+    "svelte-ts:README.md": "vite/svelte-ts/README.md",
+    "solid-ts:src/App.tsx": "vite/solid-ts/App.tsx",
+    "solid-ts:README.md": "vite/solid-ts/README.md",
+    "preact-ts:src/app.tsx": "vite/preact-ts/app.tsx",
+    "qwik-ts:src/app.tsx": "vite/qwik-ts/app.tsx",
+    "qwik-ts:README.md": "vite/qwik-ts/README.md",
+    "lit-ts:src/my-element.ts": "vite/lit-ts/my-element.ts",
+    "lit-ts:index.html": "vite/lit-ts/index.html"
   },
   "remove": [
     "react-ts:src/assets/vite.svg",
@@ -22,6 +31,21 @@
     "vue-ts:public/icons.svg",
     "vanilla-ts:src/assets/vite.svg",
     "vanilla-ts:src/assets/typescript.svg",
-    "vanilla-ts:public/icons.svg"
+    "vanilla-ts:public/icons.svg",
+    "svelte-ts:src/assets/vite.svg",
+    "svelte-ts:src/assets/svelte.svg",
+    "svelte-ts:public/icons.svg",
+    "solid-ts:src/assets/vite.svg",
+    "solid-ts:src/assets/solid.svg",
+    "solid-ts:public/icons.svg",
+    "preact-ts:src/assets/vite.svg",
+    "preact-ts:src/assets/preact.svg",
+    "preact-ts:public/icons.svg",
+    "lit-ts:src/assets/vite.svg",
+    "lit-ts:src/assets/lit.svg",
+    "lit-ts:public/icons.svg",
+    "qwik-ts:src/assets/vite.svg",
+    "qwik-ts:src/assets/qwik.svg",
+    "qwik-ts:public/icons.svg"
   ]
 }
