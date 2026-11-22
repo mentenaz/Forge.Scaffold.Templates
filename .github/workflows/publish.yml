@@ -51,8 +51,55 @@ env:
   VITE_REPOSITORY: ${{ vars.VITE_REPOSITORY || 'mentenaz/vite' }}
 
 jobs:
+  # ------------------------------------------- the index that is live now, read over ssh (the only thing this job does)
+  # The build needs the index published last time (it decides which archives keep their revision). The web server (port
+  # 443) sometimes does not answer GitHub's runners, while ssh on port 24, which the upload uses, does. So the index is read
+  # here over ssh through the server's read-only `index` command and handed to the build as an artifact. This job never
+  # fails the workflow: if it cannot read the index (the server script has not been updated yet, or the host does not
+  # answer), the build downloads it over https as before. It builds nothing and runs only tools/fetch_index_ssh.sh.
+  previous-index:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Check out the scripts only
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          path: templates
+          sparse-checkout: tools
+          persist-credentials: false
+
+      - name: Read the live index over ssh
+        continue-on-error: true
+        env:
+          SSH_KEY: ${{ secrets.SSH_KEY }}
+          SSH_HOST: downloads.mentenaz-server.com
+          SSH_PORT: "24"
+          SSH_USER: mentefpu
+          SSH_MACS: hmac-sha2-256
+          OUT_FILE: previous/index.json
+        run: |
+          set -euo pipefail
+          umask 077
+          [ -n "$SSH_KEY" ] || { echo "no SSH_KEY secret: the build will download the index"; exit 1; }
+          key="$RUNNER_TEMP/deploy_key"
+          known="$RUNNER_TEMP/known_hosts"
+          trap 'rm -f "$key" "$known"' EXIT
+          printf '%s\n' "$SSH_KEY" | tr -d '\r' > "$key"
+          echo '[downloads.mentenaz-server.com]:24 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEaP/0qV5NeAJcIVmPpQKJhRRa8QRoUcS+V2cBvx4I6g' > "$known"
+          SSH_KEY_FILE="$key" SSH_KNOWN_HOSTS_FILE="$known" bash templates/tools/fetch_index_ssh.sh
+
+      - name: Hand it to the build
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: previous-index
+          path: previous/index.json
+          if-no-files-found: ignore
+          retention-days: 1
+
   # ------------------------------------------------------------------ build and check (no secrets)
   build:
+    needs: previous-index
+    if: ${{ !cancelled() }}
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     steps:
@@ -100,6 +147,15 @@ jobs:
           token: ${{ secrets.CHECKOUT_TOKEN || github.token }}
           persist-credentials: false
 
+      # The index the job before this one read over ssh. It is not there when that did not work; the script then
+      # downloads the index over https.
+      - name: Get the previous index that was read over ssh
+        continue-on-error: true
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: previous-index
+          path: previous
+
       - name: Install Rust
         uses: dtolnay/rust-toolchain@683b588c487a69d01f6c6ddf40f036ff682cc2c8 # v1
         with:
@@ -118,6 +174,7 @@ jobs:
           INCLUDE_YO: ${{ inputs.include_yo_generators && '1' || '0' }}
           VITE_DIR: ${{ inputs.vite_templates != '' && 'vite' || '' }}
           VITE_TEMPLATES: ${{ inputs.vite_templates }}
+          PREVIOUS_INDEX_FILE: previous/index.json
         run: bash templates/tools/publish_build.sh
 
       - name: Keep the release for review and for the upload job

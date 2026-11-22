@@ -3,12 +3,14 @@
 #
 # Install it as ~/bin/forge-templates-receive (mode 755) and, once it works, tie the key to it in
 # ~/.ssh/authorized_keys:   command="/home/mentefpu/bin/forge-templates-receive",restrict ssh-ed25519 AAAA...
-# After that the key can run these three commands and nothing else (no shell, no other path):
+# After that the key can run these four commands and nothing else (no shell, no other path):
 #
 #   forge-templates-receive stage    reads a tar stream on stdin into <folder>/.incoming (at most 200 MB)
 #   forge-templates-receive finish   moves .incoming/*.tar.gz into the folder, then index.json last,
 #                                    then removes .incoming. Every move is an atomic rename.
 #   forge-templates-receive check    prints the folder and what it can do, and writes and removes one probe file
+#   forge-templates-receive index    prints the published index.json and changes nothing (the build reads the previous
+#                                    index this way, over ssh, when the web server does not answer GitHub's runners)
 #
 # Without the forced command (before it is switched on) the client calls this script by its path and the
 # arguments arrive normally. With it, ssh puts what the client asked for in SSH_ORIGINAL_COMMAND and
@@ -25,7 +27,7 @@ if [ -n "${SSH_ORIGINAL_COMMAND:-}" ]; then
   read -r -a words <<<"$SSH_ORIGINAL_COMMAND"
   set -- "${words[@]:1}"
 fi
-[ "$#" -eq 1 ] || die "usage: forge-templates-receive stage|finish|check"
+[ "$#" -eq 1 ] || die "usage: forge-templates-receive stage|finish|check|index"
 
 [ -d "$DIR" ] || die "the templates folder does not exist"
 cd "$DIR"
@@ -82,5 +84,11 @@ case "$1" in
     echo "write, rename and remove all work"
     ;;
 
-  *) die "unknown command (use stage, finish or check)" ;;
+  index)
+    # Read only. Exit 3 when there is no index yet (the first publish), so a client can tell that from an error.
+    [ -f index.json ] || { echo "forge-templates-receive: there is no index.json yet" >&2; exit 3; }
+    cat index.json
+    ;;
+
+  *) die "unknown command (use stage, finish, check or index)" ;;
 esac

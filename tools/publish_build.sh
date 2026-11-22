@@ -16,6 +16,8 @@
 #                       the generators vite-<template>. Empty (default) releases no Vite templates.
 #   VITE_TEMPLATES      which create-vite templates to release, separated by spaces or commas (default: all but qwik and
 #                       qwik-ts, which do not npm install). Only used with VITE_DIR.
+#   PREVIOUS_INDEX_FILE optional. A copy of the index published last time that was read over ssh (see tools/fetch_index_ssh.sh).
+#                       It is used instead of the download when it is there, and is checked the same way.
 #   PREVIOUS_INDEX_URL  the index published last time, so unchanged archives keep their revision.
 #                       Default BASE_URL/index.json. A 404 means "first publish". Set to empty to skip.
 #   PYTHON              default python3.
@@ -58,7 +60,18 @@ fi
 
 # ---- the previous index: it decides which archives keep their revision
 PREV_COPY=""
-if [ -n "$PREVIOUS_INDEX_URL" ]; then
+if [ -n "${PREVIOUS_INDEX_FILE:-}" ] && [ -s "$PREVIOUS_INDEX_FILE" ]; then
+  # Read over ssh by the job before this one, from the server itself. It has to be an index to be used.
+  if "$PYTHON" -c 'import json,sys; d=json.load(open(sys.argv[1],encoding="utf-8")); assert d.get("schema")==1 and d.get("templates")' "$PREVIOUS_INDEX_FILE" 2>/dev/null; then
+    cp "$PREVIOUS_INDEX_FILE" "$OUT_DIR/index.json"
+    PREV_COPY="$(mktemp)"
+    cp "$PREVIOUS_INDEX_FILE" "$PREV_COPY"
+    echo "previous index: read over ssh from the server"
+  else
+    echo "the index read over ssh is not valid; downloading it instead"
+  fi
+fi
+if [ -z "$PREV_COPY" ] && [ -n "$PREVIOUS_INDEX_URL" ]; then
   # The host sometimes does not answer GitHub's runners, so fail each try fast (15 s to connect) and
   # try again for a few minutes instead of hanging for ten.
   code="$(curl -sS -L --connect-timeout 15 --max-time 60 --retry 6 --retry-delay 20 --retry-all-errors \
