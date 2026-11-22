@@ -1,0 +1,129 @@
+{
+  "id": "backend-api",
+  "version": "1.0.0",
+  "prompts": [
+    {
+      "key": "projectName",
+      "type": "text",
+      "label": "Project name",
+      "default": "my-api",
+      "rule": "package-name"
+    },
+    {
+      "key": "description",
+      "type": "text",
+      "label": "Description",
+      "default": "A Fastify API"
+    },
+    {
+      "key": "port",
+      "type": "choice",
+      "label": "Port the server listens on",
+      "options": [
+        "3000",
+        "3001",
+        "4000",
+        "5000",
+        "8080"
+      ],
+      "default": "3000"
+    },
+    {
+      "key": "cors",
+      "type": "bool",
+      "label": "Allow cross-origin requests (CORS)",
+      "default": true
+    },
+    {
+      "key": "docker",
+      "type": "bool",
+      "label": "Add a Dockerfile",
+      "default": false
+    },
+    {
+      "key": "install",
+      "type": "bool",
+      "label": "Run install afterwards",
+      "default": false
+    }
+  ],
+  "folderFrom": "projectName",
+  "include": [
+    {
+      "folder": "project",
+      "rename": {
+        "_gitignore": ".gitignore"
+      }
+    },
+    {
+      "folder": "docker",
+      "rename": {
+        "_dockerignore": ".dockerignore"
+      },
+      "when": {
+        "key": "docker",
+        "equals": true
+      }
+    }
+  ],
+  "parts": [
+    {
+      "target": "src/server.ts",
+      "source": "fragments/server.start.ts"
+    },
+    {
+      "target": "src/server.ts",
+      "source": "fragments/server.cors-import.ts",
+      "when": {
+        "key": "cors",
+        "equals": true
+      }
+    },
+    {
+      "target": "src/server.ts",
+      "source": "fragments/server.body.ts"
+    },
+    {
+      "target": "src/server.ts",
+      "source": "fragments/server.cors-register.ts",
+      "when": {
+        "key": "cors",
+        "equals": true
+      }
+    },
+    {
+      "target": "src/server.ts",
+      "source": "fragments/server.end.ts"
+    }
+  ],
+  "merge": [
+    {
+      "file": "package.json",
+      "strategy": "json-set",
+      "path": "dependencies.@fastify/cors",
+      "value": "^11.4.0",
+      "when": {
+        "key": "cors",
+        "equals": true
+      }
+    }
+  ],
+  "post": [
+    {
+      "action": "install",
+      "when": {
+        "key": "install",
+        "equals": true
+      }
+    }
+  ],
+  "packageManagers": {
+    "default": "npm",
+    "tested": [
+      "npm"
+    ]
+  },
+  "requires": {
+    "node": ">=22"
+  }
+}

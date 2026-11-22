@@ -11,6 +11,7 @@
 #   SDK_DIR             the Forge.Scaffold.SDK checkout (default: ../Forge.Scaffold.SDK next to this repo).
 #   OUT_DIR             where to build (default: ./out). Must be empty or not exist.
 #   INCLUDE_YO          1 (default) also releases the yo-derived generator folders (templates/spfxv.*).
+#                       Generators written for this repo (the other templates/*/ folders with a manifest.json) are always released.
 #   VITE_DIR            optional. A checkout of the Vite repo (or the fork): packages/create-vite is released as
 #                       the generators vite-<template>. Empty (default) releases no Vite templates.
 #   VITE_TEMPLATES      which create-vite templates to release, separated by spaces or commas (default: all but qwik and
@@ -111,6 +112,17 @@ if [ "$INCLUDE_YO" = "1" ]; then
   done
   echo "yo-derived generators: $yo"
 fi
+
+# Generators written for this repo (templates/<name>/manifest.json, for example backend-api and fullstack). They are always
+# released; the yo-derived ones above live in templates/spfxv.* and are skipped here.
+own=0
+for dir in "$TEMPLATES_DIR"/templates/*/; do
+  case "$(basename "$dir")" in spfxv.*) continue ;; esac
+  [ -f "${dir}manifest.json" ] || continue
+  args+=("$(native "${dir%/}")")
+  own=$((own + 1))
+done
+echo "own generators: $own"
 
 # ---- build
 cargo run --release --quiet --manifest-path "$(native "$SDK_DIR")/Cargo.toml" --example release -- \

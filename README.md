@@ -21,7 +21,8 @@ checked say so; things nobody has checked are listed at the end, not hidden.
 | `tools/` | `make_generator.py`, `make_teams_icons.py`, `make_welcome_image.py`, and `publish_build.sh`, `publish_verify.py` for publishing | written for this repo |
 | `.github/workflows/publish.yml` | a workflow that builds the archives and index and uploads them over FTPS, by hand only | written for this repo; it has published twice (20 November 2026); the second run changed nothing and uploaded nothing. The host sometimes does not answer the runner, so builds and uploads retry |
 | `CurrentVersions.md`, `DirectoryTress.ps1`, `PerposedTemplateStructure.json`, `tree.json` | working notes and helper files | written by the repo owner |
-| `generators/backend-api`, `fullstack` | empty folders (git does not keep them), planned generators | nothing yet |
+| `templates/backend-api.1.0.0/` | a Node and TypeScript API (Fastify) with optional CORS and Dockerfile, a test, and a choice of port | written for this repo (21 Nov 2026); installed, built, tested and run on Node 22.23.0 |
+| `templates/fullstack.1.0.0/` | a Vite, React and TypeScript front end and the same API in one repository (npm workspaces, the front end forwards `/api` to the API) | written for this repo; installed, built, tested and run, and the Vite proxy checked |
 
 **The official SPFx templates are not stored here.** The SDK's release builder reads them from a checkout of
 [SharePoint/spfx](https://github.com/SharePoint/spfx) and puts a `NOTICE.txt` with Microsoft's MIT notice in every archive. The

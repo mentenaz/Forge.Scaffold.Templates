@@ -1,0 +1,65 @@
+{
+  "id": "fullstack",
+  "version": "1.0.0",
+  "prompts": [
+    {
+      "key": "projectName",
+      "type": "text",
+      "label": "Project name",
+      "default": "my-app",
+      "rule": "package-name"
+    },
+    {
+      "key": "description",
+      "type": "text",
+      "label": "Description",
+      "default": "A React front end and a Fastify API"
+    },
+    {
+      "key": "port",
+      "type": "choice",
+      "label": "Port the server listens on",
+      "options": [
+        "3000",
+        "3001",
+        "4000",
+        "5000",
+        "8080"
+      ],
+      "default": "3000"
+    },
+    {
+      "key": "install",
+      "type": "bool",
+      "label": "Run install afterwards",
+      "default": false
+    }
+  ],
+  "folderFrom": "projectName",
+  "include": [
+    {
+      "folder": "project",
+      "rename": {
+        "_gitignore": ".gitignore"
+      }
+    }
+  ],
+  "post": [
+    {
+      "action": "install",
+      "when": {
+        "key": "install",
+        "equals": true
+      }
+    }
+  ],
+  "packageManagers": {
+    "default": "npm",
+    "tested": [
+      "npm"
+    ]
+  },
+  "requires": {
+    "node": "^20.19.0 || >=22.12.0"
+  }
+}
