@@ -110,6 +110,12 @@ def build(version: str):
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_bytes(data)
 
+    # SPFx Fast Serve is a community add-on that the 1.20.0 and 1.21.1 captures carry. It is not in what yo writes, so it
+    # becomes an optional prompt (fastServe, off by default): its folder is an include, its dependency and script are
+    # merges, and the gulpfile is assembled from parts so the hook is only there when asked for.
+    has_fast = any(r.startswith("fast-serve/") for r in tracked(src))
+    fast = {}
+
     for rel in tracked(src):
         name = rel.rsplit("/", 1)[-1]
         if name in SKIP_NAMES or name.endswith(".scss.ts"):
@@ -117,7 +123,22 @@ def build(version: str):
         raw = (src / rel).read_bytes()
         text = raw.decode("utf-8") if read_text(src / rel) is not None else None
 
-        if rel == "config/config.json":
+        if has_fast and rel.startswith("fast-serve/"):
+            put(rel[len("fast-serve/"):], "fastserve", raw)
+        elif has_fast and rel == "gulpfile.js":
+            m = re.search(r"/\* fast-serve \*/\n.*?/\* end of fast-serve \*/\n\n?", text, re.S)
+            assert m, "no fast-serve block in gulpfile.js"
+            put("gulpfile.head.js", "fragments", text[: m.start()].encode())
+            put("gulpfile.fastserve.js", "fragments", m.group(0).encode())
+            put("gulpfile.tail.js", "fragments", text[m.end():].encode())
+        elif has_fast and rel == "package.json":
+            pkg = json.loads(text)
+            fast["helpers"] = {k: v for k, v in pkg["devDependencies"].items() if k == "spfx-fast-serve-helpers"}
+            fast["serve"] = pkg["scripts"].pop("serve")
+            for k in fast["helpers"]:
+                del pkg["devDependencies"][k]
+            put(rel, "solution", solution_text(json.dumps(pkg, indent=2, ensure_ascii=False) + "\n").encode())
+        elif rel == "config/config.json":
             cfg = json.loads(text)
             cfg["bundles"] = {}
             cfg["localizedResources"] = {}
@@ -181,6 +202,21 @@ def build(version: str):
         "post": [{"action": "install", "when": {"key": "install", "equals": True}}],
         "packageManagers": {"default": "npm", "tested": ["npm"]},
     }
+    if has_fast:
+        on = {"key": "fastServe", "equals": True}
+        manifest["prompts"].insert(3, {"key": "fastServe", "type": "bool", "default": False,
+                                       "label": "Add SPFx Fast Serve (a community add-on for a faster dev server)"})
+        manifest["include"].append({"folder": "fastserve", "to": "fast-serve", "when": on})
+        manifest["parts"] = [
+            {"target": "gulpfile.js", "source": "fragments/gulpfile.head.js"},
+            {"target": "gulpfile.js", "source": "fragments/gulpfile.fastserve.js", "when": on},
+            {"target": "gulpfile.js", "source": "fragments/gulpfile.tail.js"},
+        ]
+        ((dev_key, dev_val),) = fast["helpers"].items()
+        manifest["merge"] = [
+            {"file": "package.json", "strategy": "json-set", "path": f"devDependencies.{dev_key}", "value": dev_val, "when": on},
+            {"file": "package.json", "strategy": "json-set", "path": "scripts.serve", "value": fast["serve"], "when": on},
+        ] + manifest["merge"]
     # The Node the capture needs (engines.node of its package.json), so the host can check it before installing.
     engines = json.loads((src / "package.json").read_text("utf-8")).get("engines", {}).get("node")
     if engines:

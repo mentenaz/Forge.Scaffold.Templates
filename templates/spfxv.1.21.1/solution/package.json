@@ -10,7 +10,6 @@
     "build": "gulp build",
     "clean": "gulp clean",
     "test": "node -v",
-    "serve": "npm run clean && npm run build && fast-serve",
     "production": "gulp clean && gulp bundle --ship && gulp package-solution --ship"
   },
   "dependencies": {
@@ -39,7 +38,6 @@
     "@types/react": "17.0.45",
     "@types/react-dom": "17.0.17",
     "eslint-plugin-react-hooks": "4.3.0",
-    "@microsoft/sp-module-interfaces": "1.21.1",
-    "spfx-fast-serve-helpers": "~1.21.1"
+    "@microsoft/sp-module-interfaces": "1.21.1"
   }
 }

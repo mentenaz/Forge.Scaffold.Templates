@@ -21,6 +21,12 @@
       "rule": "webpart-names"
     },
     {
+      "key": "fastServe",
+      "type": "bool",
+      "default": false,
+      "label": "Add SPFx Fast Serve (a community add-on for a faster dev server)"
+    },
+    {
       "key": "install",
       "type": "bool",
       "label": "Run install afterwards",
@@ -36,6 +42,14 @@
   "include": [
     {
       "folder": "solution"
+    },
+    {
+      "folder": "fastserve",
+      "to": "fast-serve",
+      "when": {
+        "key": "fastServe",
+        "equals": true
+      }
     }
   ],
   "repeat": [
@@ -49,6 +63,26 @@
     }
   ],
   "merge": [
+    {
+      "file": "package.json",
+      "strategy": "json-set",
+      "path": "devDependencies.spfx-fast-serve-helpers",
+      "value": "~1.20.0",
+      "when": {
+        "key": "fastServe",
+        "equals": true
+      }
+    },
+    {
+      "file": "package.json",
+      "strategy": "json-set",
+      "path": "scripts.serve",
+      "value": "gulp clean && gulp build && fast-serve",
+      "when": {
+        "key": "fastServe",
+        "equals": true
+      }
+    },
     {
       "file": "config/config.json",
       "strategy": "json-set",
@@ -86,6 +120,24 @@
       "npm"
     ]
   },
+  "parts": [
+    {
+      "target": "gulpfile.js",
+      "source": "fragments/gulpfile.head.js"
+    },
+    {
+      "target": "gulpfile.js",
+      "source": "fragments/gulpfile.fastserve.js",
+      "when": {
+        "key": "fastServe",
+        "equals": true
+      }
+    },
+    {
+      "target": "gulpfile.js",
+      "source": "fragments/gulpfile.tail.js"
+    }
+  ],
   "requires": {
     "node": ">=18.17.1 <19.0.0"
   }
