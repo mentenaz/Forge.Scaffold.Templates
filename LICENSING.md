@@ -21,6 +21,10 @@ Files written for this repo, which belong to the repo owner:
   [SharePoint/sp-dev-docs discussion 11052](https://github.com/SharePoint/sp-dev-docs/discussions/11052).
   The repo owner has chosen to publish these folders while that question is open, so treat them as having no licence grant from this repo. The welcome images and Teams icons are no longer Microsoft's
   (they were replaced), but the code and configuration around them still derive from the generator output.
+  **In short:** these templates were built from the `yo` generator and then modified (tokens, a rewritten component, added
+  files, replaced images). The modifications are the repo owner's; the generator-derived rest is not, and the replaced
+  images do not change that. Files that still name Microsoft (links to its documentation, JSON-schema URLs the build tools
+  use) are left as they are.
 - **Branding.** The Mentenaz Forge name, logo and the artwork in `layers/assets/common/` are brand assets, not offered under
   `MIT OR Apache-2.0`. They are the same artwork as in the Forge Super repository, whose
   [`BRANDING.md`](https://github.com/mentenaz/mentenaz.Forge.Super/blob/main/BRANDING.md) says what may be done with it.

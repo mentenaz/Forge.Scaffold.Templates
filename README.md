@@ -7,6 +7,18 @@ schemas, and the scripts that connect them.
 This file says where everything comes from. The licences are in [LICENSING.md](LICENSING.md). Statements below that were
 checked say so; things nobody has checked are listed at the end, not hidden.
 
+> **Notice: the SPFx templates are built from the `yo` generator.** The `spfxv.<version>` templates started as the output
+> of `yo @microsoft/generator-sharepoint` and were then modified: names and GUIDs became tokens, the main web part
+> component of the 1.23.2 template was rewritten as a function component, a demo component and form libraries were added,
+> and the Microsoft welcome images and Teams icons were replaced with our own artwork. **Only those parts were changed.**
+> The rest (project structure, build configuration, scripts, text and links to Microsoft documentation) still comes from
+> Microsoft's generator and stays subject to Microsoft's own terms; removing the images does not make it ours. Whether such
+> output may be redistributed is an open question, asked in
+> [SharePoint/sp-dev-docs discussion 11052](https://github.com/SharePoint/sp-dev-docs/discussions/11052) and not yet
+> answered. Nothing here is a permission from Microsoft, and the project is not affiliated with or endorsed by Microsoft.
+> The templates built from Microsoft's own MIT-licensed [SharePoint/spfx](https://github.com/SharePoint/spfx) CLI are
+> separate and carry Microsoft's MIT notice.
+
 ## What is here and where it comes from
 
 | Path | What it is | Where it comes from |
