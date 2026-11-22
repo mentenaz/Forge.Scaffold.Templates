@@ -62,7 +62,7 @@ fi
 PREV_COPY=""
 if [ -n "${PREVIOUS_INDEX_FILE:-}" ] && [ -s "$PREVIOUS_INDEX_FILE" ]; then
   # Read over ssh by the job before this one, from the server itself. It has to be an index to be used.
-  if "$PYTHON" -c 'import json,sys; d=json.load(open(sys.argv[1],encoding="utf-8")); assert d.get("schema")==1 and d.get("templates")' "$PREVIOUS_INDEX_FILE" 2>/dev/null; then
+  if "$PYTHON" -c 'import json,sys; d=json.load(open(sys.argv[1],encoding="utf-8")); assert d.get("schema") in (1,2) and d.get("templates")' "$PREVIOUS_INDEX_FILE" 2>/dev/null; then
     cp "$PREVIOUS_INDEX_FILE" "$OUT_DIR/index.json"
     PREV_COPY="$(mktemp)"
     cp "$PREVIOUS_INDEX_FILE" "$PREV_COPY"
@@ -154,8 +154,11 @@ MAX_ARCHIVE = 25 * 1024 * 1024          # the limit the engine's index applies
 
 problems = []
 index = json.load(open(os.path.join(out, "index.json"), encoding="utf-8"))
-if index.get("schema") != 1:
-    problems.append(f"index schema is {index.get('schema')}, expected 1")
+if index.get("schema") != 2:
+    problems.append(f"index schema is {index.get('schema')}, expected 2")
+for e in index.get("templates", []):
+    if not e.get("title"):
+        problems.append(f"{e.get('generator')} {e.get('version')}: the index entry has no title")
 entries = index.get("templates", [])
 if not entries:
     problems.append("the index lists no templates")

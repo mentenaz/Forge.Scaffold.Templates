@@ -1,6 +1,16 @@
 {
   "id": "fullstack",
   "version": "1.0.0",
+  "title": "Full stack (Vite + Fastify)",
+  "description": "A Vite and React front end with a Fastify API, in one repository.",
+  "tags": [
+    "fullstack",
+    "vite",
+    "react",
+    "fastify",
+    "node",
+    "typescript"
+  ],
   "prompts": [
     {
       "key": "projectName",

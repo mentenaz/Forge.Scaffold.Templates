@@ -1,6 +1,15 @@
 {
   "id": "backend-api",
   "version": "1.0.0",
+  "title": "Node API (Fastify)",
+  "description": "A Node and TypeScript API built with Fastify, with optional CORS and a Dockerfile.",
+  "tags": [
+    "node",
+    "typescript",
+    "fastify",
+    "api",
+    "backend"
+  ],
   "prompts": [
     {
       "key": "projectName",

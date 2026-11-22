@@ -165,6 +165,9 @@ def build(version: str):
     manifest = {
         "id": "spfx-webpart",
         "version": version,
+        "title": "SPFx solution with a web part (React)",
+        "description": "A complete SharePoint Framework solution with a React web part. To add a web part to a solution you already have, use \"Web part (React)\".",
+        "tags": ["spfx", "webpart", "react"],
         "prompts": [
             {"key": "solutionName", "type": "text", "label": "Solution name", "rule": "solution-name"},
             {"key": "solutionDescription", "type": "text", "label": "Solution description", "default": "My SPFx solution"},

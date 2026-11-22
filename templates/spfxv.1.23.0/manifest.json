@@ -1,6 +1,13 @@
 {
   "id": "spfx-webpart",
   "version": "1.23.0",
+  "title": "SPFx solution with a web part (React)",
+  "description": "A complete SharePoint Framework solution with a React web part. To add a web part to a solution you already have, use \"Web part (React)\".",
+  "tags": [
+    "spfx",
+    "webpart",
+    "react"
+  ],
   "prompts": [
     {
       "key": "solutionName",

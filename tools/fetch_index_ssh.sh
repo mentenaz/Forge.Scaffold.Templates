@@ -43,7 +43,7 @@ while true; do
     python3 - "$tmp" <<'PYEOF' || fail "the server answered, but not with a valid index.json"
 import json, sys
 d = json.load(open(sys.argv[1], encoding="utf-8"))
-assert d.get("schema") == 1 and isinstance(d.get("templates"), list) and d["templates"], "not an index"
+assert d.get("schema") in (1, 2) and isinstance(d.get("templates"), list) and d["templates"], "not an index"
 PYEOF
     mkdir -p "$(dirname "$OUT_FILE")"
     cp "$tmp" "$OUT_FILE"
