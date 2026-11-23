@@ -8,11 +8,15 @@ This file says where everything comes from. The licences are in [LICENSING.md](L
 checked say so; things nobody has checked are listed at the end, not hidden.
 
 > **Notice: the SPFx templates are built from the `yo` generator.** The `spfxv.<version>` templates started as the output
-> of `yo @microsoft/generator-sharepoint` and were then modified: names and GUIDs became tokens, the main web part
-> component of the 1.23.2 template was rewritten as a function component, a demo component and form libraries were added,
-> and the Microsoft welcome images and Teams icons were replaced with our own artwork. **Only those parts were changed.**
-> The rest (project structure, build configuration, scripts, text and links to Microsoft documentation) still comes from
-> Microsoft's generator and stays subject to Microsoft's own terms; removing the images does not make it ours. Whether such
+> of `yo @microsoft/generator-sharepoint` and were then edited, so they are **not plain `yo` output**. What was changed
+> (measured against fresh `yo` runs, see `docs/spfx-generator-findings.md` in Forge.Scaffold.SDK): names and GUIDs became
+> tokens; the web part and its component were rewritten (code reformatted, comments removed from the web part manifest, and
+> in 1.23.2 the component is a function component where `yo` writes a class); a shared `Types/` folder, a `paths` entry in
+> `tsconfig.json` and a `compile` script were added in the versions that have them; the community add-on `spfx-fast-serve`
+> is included, as an option, in 1.20.0 and 1.21.1; and the Microsoft welcome images and Teams icons were replaced with our
+> own artwork. The rest (project structure, other build configuration, scripts, text and links to Microsoft documentation)
+> still comes from Microsoft's generator and stays subject to Microsoft's own terms; editing it, or replacing the images,
+> does not make it ours. Whether such
 > output may be redistributed is an open question, asked in
 > [SharePoint/sp-dev-docs discussion 11052](https://github.com/SharePoint/sp-dev-docs/discussions/11052) and not yet
 > answered. Nothing here is a permission from Microsoft, and the project is not affiliated with or endorsed by Microsoft.
@@ -68,11 +72,12 @@ contains a `fast-serve/` folder or a `Types/` folder. These captures do, and hav
 | 1.21.1 | `fast-serve/`, `src/Types/`, `tsconfig.json` paths for `Types` |
 | 1.22.2 | `src/Types/`, `tsconfig.json` paths for `Types` |
 | 1.23.0 | `src/Types/`, `tsconfig.json` paths for `Types` |
-| 1.23.2 | `src/Types/`, `tsconfig.json` paths for `Types`, `DemoComponent.tsx`, and the dependencies `react-hook-form`, `zod`, `@hookform/resolvers` |
+| 1.23.2 | `src/Types/`, `tsconfig.json` paths for `Types` |
 
-The `Types/`, `DemoComponent.tsx` and form-library additions were made after generation: they are not Microsoft's generator
-output. Which of the other files differ from a clean run has not been checked file by file (for example `src/custom.d.ts`,
-which declares PNG imports, may or may not be part of a clean run).
+The `Types/` and `fast-serve/` additions were made after generation: they are not Microsoft's generator output. The 1.23.2
+template once also had `DemoComponent.tsx` and the dependencies `react-hook-form`, `zod` and `@hookform/resolvers`; they were
+removed on 22 November 2026. A file-by-file comparison of every version with a fresh `yo` run, including the other edits
+(the rewritten web part and component, a `compile` script), is in `docs/spfx-generator-findings.md` of Forge.Scaffold.SDK.
 
 All five generators were scaffolded, installed, built and packaged for real (1.20.0 under Node 18.20.8, the others under Node
 22.23.0); the results are in `docs/spfx-generator-findings.md` of the SDK repo.

@@ -9,8 +9,7 @@ Files written for this repo, which belong to the repo owner:
 - `tools/` (the scripts that make generator folders, packs and icons)
 - `Manifest.v1.json`, `pack.v1.json` and the other schemas and notes
 - every `manifest.json` under `templates/`
-- the files that were added or changed on top of the generator output, such as `DemoComponent.tsx` and the
-  `react-hook-form` / `zod` additions in the 1.23.2 template
+- the files that were added or changed on top of the generator output, such as the `src/Types/` folder
 
 ## Not covered
 
