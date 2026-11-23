@@ -4,7 +4,9 @@
 # runners while the SSH port does. It only runs the server's read-only `index` command.
 #
 # Environment: SSH_HOST, SSH_USER, SSH_PORT (default 22), SSH_KEY_FILE, SSH_KNOWN_HOSTS_FILE, SSH_MACS (optional),
-#   SSH_COMMAND (default bin/forge-templates-receive), OUT_FILE (required), SSH_TRIES (default 3), SSH_RETRY_WAIT (20).
+#   SSH_COMMAND (default bin/forge-templates-receive), OUT_FILE (required), SSH_TRIES (default 8), SSH_RETRY_WAIT (30).
+#   The host drops connections from GitHub's runners now and then (a connect timeout of 30 s each), so it tries up to 8 times
+#   30 s apart: about 8 minutes at the very most before the caller falls back to the https download.
 # Exit status: 0 the index was written; 3 the server says there is no index yet (the first publish);
 #   anything else: it could not be read (the caller decides what to do, and must not guess).
 set -euo pipefail
@@ -14,8 +16,8 @@ fail() { echo "error: $*" >&2; exit 1; }
 : "${SSH_HOST:?}" "${SSH_USER:?}" "${OUT_FILE:?}"
 SSH_PORT="${SSH_PORT:-22}"
 SSH_COMMAND="${SSH_COMMAND:-bin/forge-templates-receive}"
-SSH_TRIES="${SSH_TRIES:-3}"
-SSH_RETRY_WAIT="${SSH_RETRY_WAIT:-20}"
+SSH_TRIES="${SSH_TRIES:-8}"
+SSH_RETRY_WAIT="${SSH_RETRY_WAIT:-30}"
 [[ "$SSH_PORT" =~ ^[0-9]+$ ]] || fail "SSH_PORT must be a number"
 [[ "$SSH_TRIES" =~ ^[1-9][0-9]*$ ]] || fail "SSH_TRIES must be a positive number"
 [[ "$SSH_RETRY_WAIT" =~ ^[0-9]+$ ]] || fail "SSH_RETRY_WAIT must be a number"
