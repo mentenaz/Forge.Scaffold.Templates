@@ -1,0 +1,48 @@
+{
+  "id": "spfx-fast-serve",
+  "version": "1.0.0",
+  "title": "SPFx fast-serve",
+  "description": "Adds spfx-fast-serve to a gulp-based SPFx solution: the helpers package, the serve script and the gulpfile block.",
+  "tags": ["spfx", "gulp", "fast-serve", "add-on"],
+  "prompts": [
+    { "key": "spfxMinor", "type": "text", "label": "SPFx minor version (read from the solution)", "default": "21" },
+    {
+      "key": "serveScript",
+      "type": "choice",
+      "label": "The serve script",
+      "options": ["fast-serve", "gulp clean && gulp build && fast-serve"],
+      "default": "fast-serve"
+    },
+    { "key": "configFile", "type": "bool", "label": "Add fast-serve/config.json", "default": false },
+    { "key": "webpackExtend", "type": "bool", "label": "Add fast-serve/webpack.extend.js for your own webpack settings", "default": false },
+    {
+      "key": "pnpStub",
+      "type": "bool",
+      "label": "Stub the .module.scss files that @pnp packages reference but do not ship (adds fast-serve/webpack.extend.js)",
+      "default": false
+    },
+    { "key": "install", "type": "bool", "label": "Run install afterwards", "default": true }
+  ],
+  "include": [
+    { "folder": "core" },
+    { "folder": "config", "to": "fast-serve", "when": { "key": "configFile", "equals": true } },
+    {
+      "folder": "extend-stock",
+      "to": "fast-serve",
+      "when": { "all": [{ "key": "webpackExtend", "equals": true }, { "key": "pnpStub", "equals": false }] }
+    },
+    { "folder": "extend-pnp", "to": "fast-serve", "when": { "key": "pnpStub", "equals": true } }
+  ],
+  "post": [{ "action": "install", "when": { "key": "install", "equals": true } }],
+  "packageManagers": { "default": "npm", "tested": ["npm"] },
+  "add": {
+    "mode": "render",
+    "anySpfxVersion": true,
+    "buildSystem": "gulp",
+    "inherit": { "spfxMinor": "spfxMinor" },
+    "merge": {
+      "package.json": "package-json-scripts",
+      "gulpfile.js": "spfx-gulpfile"
+    }
+  }
+}

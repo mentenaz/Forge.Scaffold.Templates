@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "serve": "{__serveScript__}"
+  },
+  "devDependencies": {
+    "spfx-fast-serve-helpers": "~1.{__spfxMinor__}.0"
+  }
+}
