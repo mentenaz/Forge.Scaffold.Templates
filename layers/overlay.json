@@ -85,5 +85,13 @@
     "qwik:src/assets/vite.svg",
     "qwik:src/assets/qwik.svg",
     "qwik:public/icons.svg"
+  ],
+  "rewrite": [
+    {
+      "templates": ["webpart-react", "webpart-noframework", "webpart-minimal"],
+      "from": "{componentName.camel}WebPart/",
+      "to": "{componentName.camel}/",
+      "why": "FORGE CHANGE. Microsoft's 1.24 web part templates put a web part in src/webparts/<camel>WebPart/, our house layout (and the 1.20 to 1.23 generators) use src/webparts/<camel>/. The folder name is the only thing renamed: file names (<Pascal>WebPart.ts, <Pascal>WebPart.manifest.json, <camel>WebPartStrings.d.ts) and the css class stay. Every place that names the folder follows it: config/config.json (entrypoint, manifest, localizedResources). Drop this rule to go back to Microsoft's layout; on an upstream update check that those three config.json lines still end in <camel>WebPart/..."
+    }
   ]
 }
